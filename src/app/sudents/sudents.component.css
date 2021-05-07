@@ -1,0 +1,31 @@
+.nav {
+  overflow: hidden;
+  background: #00B2FF;
+}
+
+.school {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 42px;
+  color: #000;
+  text-align: center;
+}
+
+.info {
+  border: 2px solid black;
+  border-radius: 22px;
+  background: #FFFFFF;
+  margin: auto;
+  width: 80%;
+}
+
+.example-form {
+  margin: auto;
+  width: 90%;
+}
+
+.example-full-width {
+  width: 100%;
+}

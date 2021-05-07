@@ -1,0 +1,30 @@
+.nav {
+  overflow: hidden;
+  background: #00B2FF;
+}
+
+.name {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 42px;
+  color: #000;
+  text-align: center;
+}
+
+.button{
+  font-size: 50px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 15px;
+  height: 204px;
+  width: 400px;
+  margin: 15px;
+}
+
+.menu{
+  margin: auto;
+  width: 99%;
+}
