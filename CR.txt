@@ -1,0 +1,5 @@
+1. Podziel to na moduły, potem będziesz musiał dołożyć serwisy i nie będziesz wiedział co się dzieje
+2. Wykorzystaj gotowce (Angular Material), właśnie od tego jest framework
+3. Nie twórz nadmiarowego kodu czyt. nie masz skończonego ani jednego panelu do tego stopnia żeby był używalny. 
+Np. panel logowania, masz html ale nie masz żadnych walidacji, ktoś może wpisać co chce i przejdzie dalej. 
+Kolejną kwestią jest pobieranie danych, ten formularz leci na backend więc musisz te dane jakoś pobrać do TS right?
