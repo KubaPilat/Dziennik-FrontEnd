@@ -8,6 +8,8 @@ import { MatInputModule } from '@angular/material/input';
 import { LoginComponent } from './login/login.component';
 import { PlanComponent } from './plan/plan.component';
 import { ClassComponent } from './class/class.component';
+import { GradesComponent } from './grades/grades.component';
+import { TeachersComponent } from './teachers/teachers.component';
 
 
 @NgModule({
