@@ -5,12 +5,8 @@ import { AppRoutingModule, RoutingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
-import { LoginComponent } from './login/login.component';
-import { PlanComponent } from './plan/plan.component';
-import { ClassComponent } from './class/class.component';
-import { GradesComponent } from './grades/grades.component';
-import { TeachersComponent } from './teachers/teachers.component';
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -21,7 +17,9 @@ import { TeachersComponent } from './teachers/teachers.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],

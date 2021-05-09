@@ -19,7 +19,7 @@
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 15px;
-  height: 204px;
+  height: 220px;
   width: 400px;
   margin: 15px;
 }
@@ -27,4 +27,8 @@
 .menu{
   margin: auto;
   width: 99%;
+}
+
+.icon {
+  font-size: 80px;
 }
