@@ -6,6 +6,12 @@
 
 <br>
 
+<mat-form-field>
+  <mat-label>Wyszukaj Nauczyciela</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Jakub Piłat" >
+</mat-form-field>
+
+
 <table mat-table
        [dataSource]="dataSource" multiTemplateDataRows
        class="mat-elevation-z8">

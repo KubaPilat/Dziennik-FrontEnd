@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
   selector: 'app-teachers',
@@ -15,10 +16,18 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 
 export class TeachersComponent {
-  dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
   columnsToDisplay = ['name', 'Surname'];
   expandedElement: PeriodicElement | null | undefined;
+  displayedColumns: string[] = ['name',  'Surname'];
+  ELEMENT_DATA: any;
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 }
+
 
 export interface PeriodicElement {
   name: string;
