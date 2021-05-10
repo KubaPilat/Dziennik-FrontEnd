@@ -8,7 +8,7 @@
 
 <mat-form-field>
   <mat-label>Wyszukaj klasę</mat-label>
-  <input matInput (keyup)="ClassFilter($event)" placeholder="np. 1A" >
+  <input matInput (keyup)="ClassFilter($event)" placeholder="np. 1A" #input>
 </mat-form-field>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
