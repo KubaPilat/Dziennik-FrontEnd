@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="teachers.component.css">
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
 <div class="nav">
   <p class="school"> Szkoła Podstawowa </p>
@@ -7,33 +6,35 @@
 
 <br>
 
-<div class="example-form">
-  <form>
-    <mat-form-field class="example-full-width">
-      <mat-label>Wyszukaj Nauczyciela:</mat-label>
-      <label>
-        <input matInput placeholder="Adam Kruża">
-      </label>
-    </mat-form-field>
-  </form>
-</div>
+<table mat-table
+       [dataSource]="dataSource" multiTemplateDataRows
+       class="mat-elevation-z8">
+  <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+  </ng-container>
 
-<div>
-  <table class="info">
-    <th>Imie</th>
-    <th>Nazwisko</th>
-    <th>Więcej</th>
-    <th> \/</th>
-  </table>
-</div>
+  <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+  <ng-container matColumnDef="expandedDetail">
+    <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+      <div class="example-element-detail"
+           [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+        <div class="example-element-diagram">
+          <div class="example-element-position"> {{element.name}} </div>
+          <div class="example-element-name"> {{element.surname}} </div>
+        </div>
+        <div class="example-element-description">
+          {{element.description}}
+        </div>
+      </div>
+    </td>
+  </ng-container>
 
-<br>
-
-<div>
-  <table class="teachers">
-    <th>Adam</th>
-    <th>Kruża</th>
-    <th>Więcej</th>
-    <th> \/</th>
-  </table>
-</div>
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+      class="example-element-row"
+      [class.example-expanded-row]="expandedElement === element"
+      (click)="expandedElement = expandedElement === element ? null : element">
+  </tr>
+  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+</table>
