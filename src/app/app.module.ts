@@ -12,11 +12,13 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutingComponent,
+    MessageComponent,
   ],
   imports: [
     BrowserModule,

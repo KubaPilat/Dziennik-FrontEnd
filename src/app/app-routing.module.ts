@@ -7,6 +7,7 @@ import {PlanComponent} from './plan/plan.component';
 import {ClassComponent} from './class/class.component';
 import {GradesComponent} from './grades/grades.component';
 import {TeachersComponent} from './teachers/teachers.component';
+import {MessageComponent} from './message/message.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'plan', component: PlanComponent},
   {path: 'class', component: ClassComponent},
   {path: 'grades', component: GradesComponent},
-  {path: 'teachers', component: TeachersComponent}
+  {path: 'teachers', component: TeachersComponent},
+  {path: 'message', component: MessageComponent}
 ];
 
 @NgModule({
@@ -24,4 +26,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingComponent = [StudentsComponent, MainComponent, LoginComponent, PlanComponent, ClassComponent, GradesComponent, TeachersComponent];
+export const RoutingComponent = [StudentsComponent, MainComponent, LoginComponent, PlanComponent, ClassComponent, GradesComponent, TeachersComponent, MessageComponent];
