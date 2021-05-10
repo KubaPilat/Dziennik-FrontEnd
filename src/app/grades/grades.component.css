@@ -16,26 +16,11 @@
   padding: 15px;
 }
 
-.info {
-  border: 2px solid black;
-  border-radius: 22px;
-  background: #FFFFFF;
-  margin: auto;
-  width: 90%;
+table {
+  width: 100%;
 }
 
-.grades{
-  border: 2px solid black;
-  background: #FFFFFF;
-  margin: auto;
-  width: 90%;
-}
-
-.example-form {
-  margin: auto;
-  width: 90%;
-}
-
-.example-full-width {
+.mat-form-field {
+  font-size: 14px;
   width: 100%;
 }
