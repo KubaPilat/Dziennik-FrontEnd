@@ -11,14 +11,14 @@ import {MessageComponent} from './message/message.component';
 
 
 const routes: Routes = [
-  {path: 'main', component: MainComponent},
-  {path: 'students', component: StudentsComponent},
-  {path: 'login', component: LoginComponent},
+  {path: 'stronaGlowna', component: MainComponent},
+  {path: 'uczniowie', component: StudentsComponent},
+  {path: 'logowanie', component: LoginComponent},
   {path: 'plan', component: PlanComponent},
-  {path: 'class', component: ClassComponent},
-  {path: 'grades', component: GradesComponent},
-  {path: 'teachers', component: TeachersComponent},
-  {path: 'message', component: MessageComponent}
+  {path: 'klasy', component: ClassComponent},
+  {path: 'oceny', component: GradesComponent},
+  {path: 'nauczyciele', component: TeachersComponent},
+  {path: 'wiadomosci', component: MessageComponent}
 ];
 
 @NgModule({

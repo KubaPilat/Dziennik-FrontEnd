@@ -25,7 +25,7 @@ export interface PeriodicElement {
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {nadawca: 'Adam Kruża', temat: 'Zawody', data: '15.02.2021'},
-  {nadawca: 'Adam Kruża', temat: 'a', data: '15.02.2021'},
+  {nadawca: 'Adam Kruża', temat: 'p', data: '15.02.2021'},
   {nadawca: 'Adam Kruża', temat: 's', data: '17.02.2021'},
   {nadawca: 'Adam Kruża', temat: 'd', data: '18.02.2021'},
   {nadawca: 'Adam Kruża', temat: 'f', data: '19.02.2021'},
