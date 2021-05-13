@@ -8,6 +8,7 @@ import {ClassComponent} from './class/class.component';
 import {GradesComponent} from './grades/grades.component';
 import {TeachersComponent} from './teachers/teachers.component';
 import {MessageComponent} from './message/message.component';
+import {DialogComponent} from './dialog/dialog.component';
 
 
 const routes: Routes = [
@@ -26,4 +27,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingComponent = [StudentsComponent, MainComponent, LoginComponent, PlanComponent, ClassComponent, GradesComponent, TeachersComponent, MessageComponent];
+export const RoutingComponent = [StudentsComponent, MainComponent, LoginComponent, PlanComponent, ClassComponent, GradesComponent, TeachersComponent, MessageComponent, DialogComponent];
