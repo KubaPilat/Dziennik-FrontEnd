@@ -13,11 +13,13 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutingComponent,
+    CalendarComponent,
   ],
   imports: [
     BrowserModule,

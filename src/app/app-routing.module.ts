@@ -9,6 +9,7 @@ import {GradesComponent} from './grades/grades.component';
 import {TeachersComponent} from './teachers/teachers.component';
 import {MessageComponent} from './message/message.component';
 import {DialogComponent} from './dialog/dialog.component';
+import {CalendarComponent} from './calendar/calendar.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'klasy', component: ClassComponent},
   {path: 'oceny', component: GradesComponent},
   {path: 'nauczyciele', component: TeachersComponent},
-  {path: 'wiadomosci', component: MessageComponent}
+  {path: 'wiadomosci', component: MessageComponent},
+  {path: 'kalendarz', component: CalendarComponent}
 ];
 
 @NgModule({
@@ -27,4 +29,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingComponent = [StudentsComponent, MainComponent, LoginComponent, PlanComponent, ClassComponent, GradesComponent, TeachersComponent, MessageComponent, DialogComponent];
+export const RoutingComponent = [StudentsComponent, MainComponent, LoginComponent, PlanComponent, ClassComponent, GradesComponent, TeachersComponent, MessageComponent, DialogComponent, CalendarComponent];
