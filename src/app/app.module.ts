@@ -14,12 +14,21 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CalendarComponent } from './calendar/calendar.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { demoComponent } from './demo/demo.component';
+import { CommonModule } from '@angular/common';
+import { AnnouncementsComponent } from './announcements/announcements.component';
+import { SendMessageComponent } from './send-message/send-message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutingComponent,
     CalendarComponent,
+    demoComponent,
+    AnnouncementsComponent,
+    SendMessageComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,11 +43,19 @@ import { CalendarComponent } from './calendar/calendar.component';
     MatNativeDateModule,
     ReactiveFormsModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    BrowserAnimationsModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
+    CommonModule,
+    FormsModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [MatInputModule]
+  exports: [MatInputModule, demoComponent]
 })
 export class AppModule { }
 
