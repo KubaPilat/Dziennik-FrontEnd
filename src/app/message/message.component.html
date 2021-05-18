@@ -4,6 +4,8 @@
 
 <br>
 
+<button mat-raised-button (click)="sendMessage()">Wyślij Wiadomość </button>
+
 <mat-form-field>
   <mat-label>Wyszukaj wiadomości:</mat-label>
   <input matInput (keyup)="applyFilter($event)" #input>

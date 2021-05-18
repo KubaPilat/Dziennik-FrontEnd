@@ -23,7 +23,8 @@ const routes: Routes = [
   {path: 'oceny', component: GradesComponent},
   {path: 'nauczyciele', component: TeachersComponent},
   {path: 'wiadomosci', component: MessageComponent},
-  {path: 'kalendarz', component: CalendarComponent}
+  {path: 'kalendarz', component: CalendarComponent},
+  {path: 'wiado', component: SendMessageComponent},
 ];
 
 @NgModule({

@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
@@ -19,6 +19,9 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { demoComponent } from './demo/demo.component';
 import { CommonModule } from '@angular/common';
 import { SendMessageComponent } from './send-message/send-message.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -48,8 +51,8 @@ import { SendMessageComponent } from './send-message/send-message.component';
       useFactory: adapterFactory,
     }),
     CommonModule,
-    FormsModule,
-    CalendarModule
+    CalendarModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent],

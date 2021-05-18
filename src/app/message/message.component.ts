@@ -31,7 +31,17 @@ export class MessageComponent {
       data: row
     });
   }
+
+  sendMessage() {
+    this.dialog.open(SendMessage);
+  }
 }
+
+@Component({
+  selector: 'send-message',
+  templateUrl: '../send-message/send-message.component.html',
+})
+export class SendMessage {}
 
 export interface PeriodicElement {
   nadawca: string;
