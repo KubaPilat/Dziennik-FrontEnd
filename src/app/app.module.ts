@@ -18,7 +18,6 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { demoComponent } from './demo/demo.component';
 import { CommonModule } from '@angular/common';
-import { AnnouncementsComponent } from './announcements/announcements.component';
 import { SendMessageComponent } from './send-message/send-message.component';
 
 @NgModule({
@@ -27,7 +26,6 @@ import { SendMessageComponent } from './send-message/send-message.component';
     RoutingComponent,
     CalendarComponent,
     demoComponent,
-    AnnouncementsComponent,
     SendMessageComponent,
   ],
   imports: [
