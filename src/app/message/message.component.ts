@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { DialogComponent } from '../dialog/dialog.component';
+import { SendComponent } from '../send/send.component';
 
 @Component({
   selector: 'app-message',
@@ -37,12 +38,6 @@ export class MessageComponent {
   }
 }
 
-@Component({
-  selector: 'send-message',
-  templateUrl: '../send-message/send-message.component.html',
-})
-export class SendMessage {}
-
 export interface PeriodicElement {
   nadawca: string;
   temat: string;
@@ -72,3 +67,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {nadawca: 'kjgh Kru47ża', temat: 'afdgd', dataWyslania: '25.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem'},
   {nadawca: 'try Krasduża', temat: 'fgadfg', dataWyslania: '10.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm m'},
 ];
+
+@Component({
+  selector: 'send',
+  templateUrl: '../send/send.component.html',
+})
+export class SendMessage {}
