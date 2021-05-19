@@ -12,6 +12,7 @@ import {DialogComponent} from './dialog/dialog.component';
 import {CalendarComponent} from './calendar/calendar.component';
 import {demoComponent} from './demo/demo.component';
 import {SendComponent} from './send/send.component';
+import {NoticeComponent} from './notice/notice.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'wiadomosci', component: MessageComponent},
   {path: 'kalendarz', component: CalendarComponent},
   {path: 'wiado', component: SendComponent},
+  {path: 'Ogloszenia', component: NoticeComponent},
 ];
 
 @NgModule({
@@ -33,4 +35,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const RoutingComponent = [StudentsComponent, MainComponent, LoginComponent, PlanComponent, ClassComponent,
-  GradesComponent, TeachersComponent, MessageComponent, DialogComponent, CalendarComponent, SendComponent, demoComponent];
+  GradesComponent, TeachersComponent, MessageComponent, DialogComponent, CalendarComponent, SendComponent, NoticeComponent, demoComponent];

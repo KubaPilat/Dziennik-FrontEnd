@@ -9,9 +9,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { demoComponent } from './demo/demo.component';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/material/material.module';
-import { SendComponent } from './send/send.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { NoticeComponent } from './notice/notice.component';
 
 
 
@@ -20,14 +18,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AppComponent,
     RoutingComponent,
     CalendarComponent,
+    NoticeComponent,
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     AppRoutingModule,
     BrowserModule,
-    MatFormFieldModule,
-    ReactiveFormsModule,
     BrowserAnimationsModule,
     CalendarModule.forRoot({
       provide: DateAdapter,

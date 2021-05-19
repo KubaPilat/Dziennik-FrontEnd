@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SendMessageComponent } from './send-message.component';
+import { NoticeComponent } from './notice.component';
 
-describe('SendMessageComponent', () => {
-  let component: SendMessageComponent;
-  let fixture: ComponentFixture<SendMessageComponent>;
+describe('NoticeComponent', () => {
+  let component: NoticeComponent;
+  let fixture: ComponentFixture<NoticeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SendMessageComponent ]
+      declarations: [ NoticeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SendMessageComponent);
+    fixture = TestBed.createComponent(NoticeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
