@@ -6,6 +6,14 @@ import {MatTableDataSource} from '@angular/material/table';
   selector: 'app-class',
   templateUrl: './class.component.html',
   styleUrls: ['./class.component.css'],
+  //to samo co w student panele
+  animations: [
+    trigger('detailExpand', [
+      state('collapsed', style({height: '0px', minHeight: '0'})),
+      state('expanded', style({height: '*'})),
+      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+    ]),
+  ],
 })
 
 export class ClassComponent {

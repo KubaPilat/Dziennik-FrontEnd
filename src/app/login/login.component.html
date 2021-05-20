@@ -1,13 +1,24 @@
-<form>
-  <div class="container">
-    <label for="login"><b>Login</b><br>
-      <input type="text" placeholder="Login" name="login" required>
-    </label><br>
+<div class="nav">
+  <p class="school"> Szkoła Podstawowa </p>
+</div>
 
-    <label for="psw"><b>Haslo</b><br>
-    <input type="password" placeholder="password" name="haslo" required><br>
-    </label>
+<br>
 
-    <button type="submit">Zaloguj</button>
-  </div>
-</form>
+<div class="container">
+  <form [formGroup]="formGroup"  class="form">
+<!--    (ngSubmit)="onSubmit(formGroup.value)"-->
+
+    <mat-form-field floatLabel="never" class="form-element">
+      <input minlength="4" type="number" matInput placeholder="Login" formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field floatLabel="never" class="form-element">
+      <input minlength="8" type="password" matInput placeholder="Hasło" formControlName="password">
+    </mat-form-field>
+
+    <div class="form-element">
+      <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Zaloguj</button>
+    </div>
+
+  </form>
+</div>
