@@ -10,6 +10,7 @@ import { helpToCalendar } from './demo/demo.component';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/material/material.module';
 import { NoticeComponent } from './notice/notice.component';
+import { SendNoticeComponent } from './send-notice/send-notice.component';
 
 
 
@@ -19,6 +20,7 @@ import { NoticeComponent } from './notice/notice.component';
     RoutingComponent,
     CalendarComponent,
     NoticeComponent,
+    SendNoticeComponent,
   ],
   imports: [
     BrowserModule,
