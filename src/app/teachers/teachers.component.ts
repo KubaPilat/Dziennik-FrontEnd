@@ -1,3 +1,4 @@
+// nie potrzebne importy
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {MatTableDataSource} from '@angular/material/table';
@@ -14,7 +15,7 @@ import {MatTableDataSource} from '@angular/material/table';
     ]),
   ],
 })
-
+// analogicznie jak w komponencie class
 export class TeachersComponent {
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   columnsToDisplay = ['name', 'Surname'];

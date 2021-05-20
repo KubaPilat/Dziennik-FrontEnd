@@ -1,5 +1,8 @@
-1. Podziel to na moduły, potem będziesz musiał dołożyć serwisy i nie będziesz wiedział co się dzieje
-2. Wykorzystaj gotowce (Angular Material), właśnie od tego jest framework
-3. Nie twórz nadmiarowego kodu czyt. nie masz skończonego ani jednego panelu do tego stopnia żeby był używalny. 
-Np. panel logowania, masz html ale nie masz żadnych walidacji, ktoś może wpisać co chce i przejdzie dalej. 
-Kolejną kwestią jest pobieranie danych, ten formularz leci na backend więc musisz te dane jakoś pobrać do TS right?
+1. Podziel na moduły funkcyjne np.
+- views i tutaj podział widoków w zależności gdzie sa wykorzystywane
+- common/views tutaj trzymaj rzeczy które są powtarzalne w całej apce lub rzeczy typowe do działania apki np. navbar i login
+2. Nie zaczynaj kilku rzeczy na raz tylko skończ jedna poprawnie i bierz się za następne, jak coś to pytaj :)
+
+
+OPCJONALNE NA PRZYSZŁOŚĆ:
+1. Wydzielenie modułów w aplikacji, akutlanie wszystko ma do wszystkiego dostęp

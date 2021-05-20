@@ -7,6 +7,7 @@ import {MatTableDataSource} from '@angular/material/table';
   templateUrl: './class.component.html',
   styleUrls: ['./class.component.css'],
   animations: [
+    // to w jakim celu jest?
     trigger('detailExpand', [
       state('collapsed', style({height: '0px', minHeight: '0'})),
       state('expanded', style({height: '*'})),
@@ -16,6 +17,8 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 
 export class ClassComponent {
+
+  //enkapsulacja
   displayedColumns: string[] = ['position'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
@@ -29,6 +32,7 @@ export interface PeriodicElement {
   position: string;
 }
 
+//tutaj możesz juz przygotować serwis który uderzy po dane do backendu :)
 const ELEMENT_DATA: PeriodicElement[] = [
   {position: '1A'},
   {position: '1B'},

@@ -7,6 +7,7 @@ export interface PeriodicElement {
   class: string;
 }
 
+// Analogicznie jak w class, możesz przygotować resta :)
 const ELEMENT_DATA: PeriodicElement[] = [
   {Name: 'Kuba', surname: 'Piłat', class: '1A'},
   {Name: 'Kuba', surname: 'Piłat', class: '1B'},

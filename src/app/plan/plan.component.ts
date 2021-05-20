@@ -1,3 +1,4 @@
+// nie potrzebny import
 import {Component, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {MatTableDataSource} from '@angular/material/table';
@@ -6,6 +7,8 @@ import {MatTableDataSource} from '@angular/material/table';
   templateUrl: './plan.component.html',
   styleUrls: ['./plan.component.css'],
   animations: [
+
+    // po co to?
     trigger('detailExpand', [
       state('collapsed', style({height: '0px', minHeight: '0'})),
       state('expanded', style({height: '*'})),
@@ -15,6 +18,7 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 
 export class PlanComponent {
+  // enkapsulacja
   displayedColumns: string[] = ['position'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 

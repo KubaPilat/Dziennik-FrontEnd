@@ -34,5 +34,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+// przenieś tą stałą do app.module
 export const RoutingComponent = [StudentsComponent, MainComponent, LoginComponent, PlanComponent, ClassComponent,
   GradesComponent, TeachersComponent, MessageComponent, DialogComponent, CalendarComponent, SendComponent, NoticeComponent, demoComponent];

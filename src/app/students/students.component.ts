@@ -14,7 +14,7 @@ import {MatTableDataSource} from '@angular/material/table';
     ]),
   ],
 })
-
+// analogicznie jak w komponencie class
 export class StudentsComponent {
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   columnsToDisplay = ['name', 'Surname', 'class', 'plan' ];

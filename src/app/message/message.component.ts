@@ -10,6 +10,7 @@ import { DialogComponent } from '../dialog/dialog.component';
 })
 
 export class MessageComponent {
+  // nazwy angielskie + enkapsulacja
   displayedColumns: string[] = ['nadawca', 'temat', 'dataWyslania', 'text'];
   dataSource = new MatTableDataSource<PeriodicElement>();
 
@@ -26,6 +27,7 @@ export class MessageComponent {
   }
 
   openDialog(row: PeriodicElement) {
+    // po co Ci ta stała?
     const dialog = this.dialog.open(DialogComponent, {
       disableClose: true,
       data: row
@@ -41,6 +43,7 @@ export interface PeriodicElement {
   text: string;
 }
 
+// proponuje przygotować resta
 const ELEMENT_DATA: PeriodicElement[] = [
   {nadawca: 'Adam Kruża', temat: 'Zawody', dataWyslania: '15.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet '},
   {nadawca: 'asd Kruża', temat: 'p', dataWyslania: '15.02.2021', text: 'lorem inpusm doloret mit amet'},

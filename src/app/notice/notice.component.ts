@@ -7,6 +7,7 @@ import { Component} from '@angular/core';
 })
 export class NoticeComponent {
 
+  // pola po angielsku 
   members: {temat: string, data: string, nadawca: string, text: string}[] = [
     {temat: 'przypomnienie', data: '12.05.2021r.', nadawca: 'Kuba', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet'},
     {temat: 'przypomnienie', data: '12.05.2021r.', nadawca: 'Kuba', text: 'ncvbcvb'},

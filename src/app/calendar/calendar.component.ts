@@ -6,8 +6,10 @@ import { CalendarEvent, CalendarView } from 'angular-calendar';
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.css']
 })
+// Potrzebujesz całego komponentu do kalendarza, sam anuglar datepicker nie wystarcza?
 export class CalendarComponent {
 
+  // enkapsulacja
   view: CalendarView = CalendarView.Month;
 
   viewDate: Date = new Date();

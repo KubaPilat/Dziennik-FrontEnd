@@ -3,6 +3,8 @@ import { CalendarView } from 'angular-calendar';
 
 @Component({
   selector: 'mwl-demo-utils-calendar-header',
+
+  // masz od tego pli html ;)
   template: `
     <div class="row text-center">
       <div class="col-md-4">
@@ -67,6 +69,7 @@ import { CalendarView } from 'angular-calendar';
     <br />
   `,
 })
+// nazwa nic nie mówi więc albo zmień albo traktujemy komponent jako zbędny
 export class demoComponent {
   // @ts-ignore
   @Input() view: CalendarView;
