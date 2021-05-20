@@ -12,19 +12,19 @@
 </mat-form-field>
 
 <table mat-table [dataSource]="dataSource" >
-  <ng-container matColumnDef="nadawca">
+  <ng-container matColumnDef="sender">
     <th mat-header-cell *matHeaderCellDef> nadawca </th>
-    <td mat-cell *matCellDef="let element"> {{element.nadawca}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.sender}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="temat">
+  <ng-container matColumnDef="topic">
     <th mat-header-cell *matHeaderCellDef> temat </th>
-    <td mat-cell *matCellDef="let element"> {{element.temat}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.topic}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="dataWyslania">
+  <ng-container matColumnDef="date">
     <th mat-header-cell *matHeaderCellDef> Data </th>
-    <td mat-cell *matCellDef="let element"> {{element.dataWyslania}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
   </ng-container>
 
   <ng-container matColumnDef="text">

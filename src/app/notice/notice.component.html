@@ -9,9 +9,9 @@
 <div class="card" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px">
   <mat-card class="clap" *ngFor="let member of members" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
     <mat-card-header class="header">
-      <mat-card-title>Temat: {{member.temat}}</mat-card-title>
-      <mat-card-title>Data: {{member.data}}</mat-card-title>
-      <mat-card-title>Nadawca: {{member.nadawca}}</mat-card-title>
+      <mat-card-title>Temat: {{member.topic}}</mat-card-title>
+      <mat-card-title>Data: {{member.date}}</mat-card-title>
+      <mat-card-title>Nadawca: {{member.sender}}</mat-card-title>
     </mat-card-header>
     <mat-card-content class="content">Treść: {{member.text}} </mat-card-content>
   </mat-card>

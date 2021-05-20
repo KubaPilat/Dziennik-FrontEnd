@@ -10,7 +10,7 @@ import {TeachersComponent} from './teachers/teachers.component';
 import {MessageComponent} from './message/message.component';
 import {DialogComponent} from './dialog/dialog.component';
 import {CalendarComponent} from './calendar/calendar.component';
-import {demoComponent} from './demo/demo.component';
+import {helpToCalendar} from './demo/demo.component';
 import {SendComponent} from './send/send.component';
 import {NoticeComponent} from './notice/notice.component';
 
@@ -34,5 +34,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+//zaimportowałem ją w app.module w 3 klinijce
 export const RoutingComponent = [StudentsComponent, MainComponent, LoginComponent, PlanComponent, ClassComponent,
-  GradesComponent, TeachersComponent, MessageComponent, DialogComponent, CalendarComponent, SendComponent, NoticeComponent, demoComponent];
+  GradesComponent, TeachersComponent, MessageComponent, DialogComponent, CalendarComponent, SendComponent, NoticeComponent, helpToCalendar];
