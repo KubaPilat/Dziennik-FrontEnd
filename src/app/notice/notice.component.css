@@ -1,0 +1,40 @@
+.nav {
+  overflow: hidden;
+  background: #00B2FF;
+  width: 100%;
+  height: 80px;
+}
+
+.school {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 42px;
+  color: #000;
+  text-align: center;
+  padding: 15px;
+}
+
+.card{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  /*border: 3px solid red;*/
+}
+
+.header{
+  /*border: 3px solid green;*/
+}
+
+/*border: 3px solid ...; is to know what is where */
+
+.content{
+  /*border: 3px solid blue;*/
+}
+
+.clap{
+  /*border: 3px solid pink;*/
+  margin: 50px;
+  background-color: rgba(238, 238, 238, 0.48);
+}

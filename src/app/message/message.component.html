@@ -1,0 +1,37 @@
+<div class="nav">
+  <p class="school"> Szkoła Podstawowa </p>
+</div>
+
+<br>
+
+<!--<button mat-raised-button (click)="sendMessage()">Wyślij Wiadomość </button>-->
+
+<mat-form-field>
+  <mat-label>Wyszukaj wiadomości:</mat-label>
+  <input matInput (keyup)="applyFilter($event)" #input>
+</mat-form-field>
+
+<table mat-table [dataSource]="dataSource" >
+  <ng-container matColumnDef="nadawca">
+    <th mat-header-cell *matHeaderCellDef> nadawca </th>
+    <td mat-cell *matCellDef="let element"> {{element.nadawca}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="temat">
+    <th mat-header-cell *matHeaderCellDef> temat </th>
+    <td mat-cell *matCellDef="let element"> {{element.temat}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="dataWyslania">
+    <th mat-header-cell *matHeaderCellDef> Data </th>
+    <td mat-cell *matCellDef="let element"> {{element.dataWyslania}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="text">
+    <th mat-header-cell *matHeaderCellDef> </th>
+    <td mat-cell *matCellDef="let element"></td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row (click)="openDialog(row)" *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

@@ -16,37 +16,12 @@
   padding: 15px;
 }
 
-.example-form {
-  margin: auto;
-  width: 90%;
-}
-
-.example-full-width {
+table {
+  text-align: center;
   width: 100%;
 }
 
-.info{
-  border: 2px solid black;
-  border-radius: 22px;
-  background: #FFFFFF;
-  margin: auto;
-  width: 90%;
-}
-
-table, tr, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  text-align: center;
-  background: #FFFFFF;
-  margin: auto;
-  width: 80%;
-}
-
-.plan{
-  text-align: center;
-  font-family: Roboto, serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 42px;
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
 }
