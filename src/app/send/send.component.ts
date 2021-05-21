@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 export interface Task {
   name: string;
@@ -16,10 +17,13 @@ export class SendComponent {
   topic!: string;
   text!: string;
 
+  constructor(private _snackBar: MatSnackBar) {}
+
   send():void{
-    //nie wiedziałem co zrobić więc zrobiłem console.log z danymi z formularza bo czekam na backend
+    //nie wiedziałem co zrobić więc zrobiłem console.loga i snackBara z danymi z formularza bo czekam na backend
     const data =  {topic: this.topic, text: this.text}
     console.log(data)
+    this._snackBar.open('Wiadomość została wysłana', 'Zamknij');
   }
 
   task: Task = {
