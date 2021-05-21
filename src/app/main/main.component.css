@@ -23,14 +23,14 @@
   box-sizing: border-box;
   border-radius: 15px;
   height: 220px;
-  width: 400px;
+  width: 390px;
   margin: 15px;
   color: black;
 }
 
 .menu{
   margin: auto;
-  width: 99%;
+  width: 90%;
 }
 
 .icon {
