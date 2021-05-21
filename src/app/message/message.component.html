@@ -11,6 +11,9 @@
   <input matInput (keyup)="applyFilter($event)" #input>
 </mat-form-field>
 
+<a routerLink="/wiadomosci"><button mat-raised-button class="button">Wyślij Wiadomość</button></a>
+
+
 <table mat-table [dataSource]="dataSource" >
   <ng-container matColumnDef="sender">
     <th mat-header-cell *matHeaderCellDef> nadawca </th>
