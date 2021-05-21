@@ -1,0 +1,26 @@
+.arena{
+  width: 80%;
+  margin: auto;
+}
+
+.form{
+  width: 100%;
+  margin: auto;
+}
+
+.info{
+  font-size: 10px;
+  text-align: center;
+}
+
+.text{
+  height: 150px;
+}
+
+.cancel{
+  float: left;
+}
+
+.send{
+  float: right;
+}

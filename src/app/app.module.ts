@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/material/material.module';
 import { NoticeComponent } from './notice/notice.component';
 import { SendNoticeComponent } from './send-notice/send-notice.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -27,6 +28,7 @@ import { SendNoticeComponent } from './send-notice/send-notice.component';
     MaterialModule,
     AppRoutingModule,
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     CalendarModule.forRoot({
       provide: DateAdapter,

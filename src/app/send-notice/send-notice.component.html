@@ -1,1 +1,16 @@
-<p>send-notice works!</p>
+<div class="arena">
+  <mat-form-field class="form" appearance="fill">
+    <mat-label>Temat: </mat-label>
+    <input matInput [(ngModel)]="topic">
+  </mat-form-field>
+
+  <mat-form-field class="form" appearance="fill">
+    <mat-label>Treść: </mat-label>
+    <textarea class="text" matInput [(ngModel)]="text"></textarea>
+  </mat-form-field>
+
+  <p class="info">Pamiętaj że ogłoszenia są dostępne dla każdego użytkownika</p>
+
+  <button class="cancel" mat-raised-button>Anuluj</button>
+  <button class="send" mat-raised-button color="primary" (click)="send()">Wyślij <mat-icon>send</mat-icon> </button>
+</div>

@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-send-notice',
   templateUrl: './send-notice.component.html',
   styleUrls: ['./send-notice.component.css']
 })
-export class SendNoticeComponent implements OnInit {
+export class SendNoticeComponent {
 
-  constructor() { }
+  topic!: string;
+  text!: string;
 
-  ngOnInit(): void {
+  send():void{
+    //nie wiedziałem co zrobić więc zrobiłem console.log z danymi z formularza bo czekam na backend
+    const data =  {topic: this.topic, text: this.text}
+    console.log(data)
   }
 
 }
