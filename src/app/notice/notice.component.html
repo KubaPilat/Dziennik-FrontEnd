@@ -1,10 +1,10 @@
-<link rel="stylesheet" href="notice.component.css">
-
 <div class="nav">
-  <p class="school"> Szkola Podstawowa </p>
+  <p class="school"> Szkoła Podstawowa </p>
 </div>
 
 <br>
+
+<a routerLink="/wiado"><button mat-raised-button class="button">Wyślij Wiadomość </button></a>
 
 <div class="card" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px">
   <mat-card class="clap" *ngFor="let member of members" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
