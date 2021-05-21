@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-send',
   templateUrl: './send.component.html',
   styleUrls: ['./send.component.css']
 })
-export class SendComponent implements OnInit {
+export class SendComponent {
 
-  constructor() { }
+  topic!: string;
+  text!: string;
 
-  ngOnInit(): void {
+  send():void{
+    //nie wiedziałem co zrobić więc zrobiłem console.log z danymi z formularza bo czekam na backend
+    const data =  {topic: this.topic, text: this.text}
+    console.log(data)
   }
-
 }

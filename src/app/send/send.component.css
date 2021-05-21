@@ -1,18 +1,51 @@
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
+.nav {
+  overflow: hidden;
+  background: #00B2FF;
+  width: 100%;
   height: 10%;
 }
 
-.example-full-width {
+.school {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 42px;
+  color: #000;
+  text-align: center;
+  padding: 15px;
+}
+
+.arena{
+  width: 80%;
+  margin: auto;
+}
+
+.form{
   width: 100%;
+  margin: auto;
 }
 
-ul {
-  list-style-type: none;
-  margin-top: 4px;
+.info{
+  font-size: 10px;
+  text-align: center;
 }
 
-.send {
+.text{
+  height: 150px;
+}
+
+.cancel{
+  float: left;
+}
+
+.send{
   float: right;
+  background-color: #00a5e9;
+  color: white;
+}
+
+.button{
+  width:98%;
+  margin: auto;
 }

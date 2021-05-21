@@ -15,5 +15,4 @@ export class SendNoticeComponent {
     const data =  {topic: this.topic, text: this.text}
     console.log(data)
   }
-
 }
