@@ -16,6 +16,12 @@
   padding: 15px;
 }
 
+ul {
+  list-style-type: none;
+  margin-top: 4px;
+}
+
+
 .arena{
   width: 80%;
   margin: auto;
