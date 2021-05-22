@@ -6,6 +6,5 @@
   <p>Treść: {{data.text}}</p>
 
   <button mat-button (click)="closeDialog()">Wyjdź</button>
-               <!--\/ dac linka do odpowiedzi\/  -->
-  <button mat-button (click)="closeDialog()">Odpowiedz</button>
+  <a routerLink="/wiadomosci"><button mat-button class="button" (click)="closeDialog()">Napisz wiadomość</button></a>
 </div>

@@ -21,8 +21,8 @@ export class SendComponent {
 
   send():void{
     //nie wiedziałem co zrobić więc zrobiłem console.loga i snackBara z danymi z formularza bo czekam na backend
-    const data =  {topic: this.topic, text: this.text}
-    console.log(data)
+    const data =  {topic: this.topic, text: this.text};
+    console.log(data);
     this._snackBar.open('Wiadomość została wysłana', 'Zamknij');
   }
 
