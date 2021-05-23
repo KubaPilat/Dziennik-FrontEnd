@@ -13,10 +13,10 @@ export class MessageComponent {
   displayedColumns: string[] = ['sender', 'topic', 'date', 'text'];
   dataSource = new MatTableDataSource<PeriodicElement>();
 
-  applyFilter(event: Event) {
+  applyFilter = (event: Event) => {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+  };
 
   constructor(private dialog: MatDialog) {
   }
@@ -25,12 +25,12 @@ export class MessageComponent {
     this.dataSource = new MatTableDataSource(ELEMENT_DATA);
   }
 
-  openDialog(row: PeriodicElement) {
+  openDialog = (row: PeriodicElement) => {
     const dialog = this.dialog.open(DialogComponent, {
       disableClose: true,
       data: row
     });
-  }
+  };
 
 }
 

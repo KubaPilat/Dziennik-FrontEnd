@@ -17,14 +17,16 @@ export class SendNoticeComponent {
 
   send(): void{
     const data =  {topic: this.topic, text: this.text};
-    if (this.text == '' || this.topic == undefined){
+    // tslint:disable-next-line:triple-equals
+    if (this.topic == '' || this.topic == undefined){
       this._snackBar.open('Ogłoszenie musi zawierać temat', 'Zamknij');
-    } if (this.text == '' || this.text == undefined ){
-      this._snackBar.open('Ogłoszenie musi zawierać tekst', 'Zamknij');
+      // tslint:disable-next-line:triple-equals
+    } else if (this.text == '' || this.text == undefined ){
+      this._snackBar.open('Ogłoszenie musi zawierać treść', 'Zamknij');
     }else{
       console.log(data);
       this._snackBar.open('Ogłoszenie zostało wysłane', 'Zamknij');
-      // this.router.navigate(['/', 'stronaGlowna']);
+      // this.router.navigate(['/stronaGlowna']);
       // Zapytac Mateusza a routing w angularze
     }
   }
