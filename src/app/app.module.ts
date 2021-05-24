@@ -10,6 +10,8 @@ import { helpToCalendar } from './demo/demo.component';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/material/material.module';
 import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -18,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     RoutingComponent,
     CalendarComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

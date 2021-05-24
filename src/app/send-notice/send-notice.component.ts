@@ -13,7 +13,8 @@ export class SendNoticeComponent {
   text!: string;
   router: any;
 
-  constructor(private _snackBar: MatSnackBar) {}
+  constructor(private _snackBar: MatSnackBar, private _router:Router) {}
+
 
   send(): void{
     const data =  {topic: this.topic, text: this.text};
@@ -24,7 +25,7 @@ export class SendNoticeComponent {
     }else{
       console.log(data);
       this._snackBar.open('Ogłoszenie zostało wysłane', 'Zamknij');
-      this.router.navigate(['/stronaGlowna']);
+      this.router.navigate(['./', 'stronaGlowna']);
     }
   }
 }

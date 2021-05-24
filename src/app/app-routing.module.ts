@@ -16,9 +16,11 @@ import {NoticeComponent} from './notice/notice.component';
 import {SendNoticeComponent} from './send-notice/send-notice.component';
 import {Plan1aComponent} from './plan1a/plan1a.component';
 import {GradesDetailComponent} from './grades-detail/grades-detail.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
+  { path: '', component: PageNotFoundComponent },
   {path: 'stronaGlowna', component: MainComponent},
   {path: 'uczniowie', component: StudentsComponent},
   {path: 'logowanie', component: LoginComponent},
