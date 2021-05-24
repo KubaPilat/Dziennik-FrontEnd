@@ -14,6 +14,7 @@ import {helpToCalendar} from './demo/demo.component';
 import {SendComponent} from './send/send.component';
 import {NoticeComponent} from './notice/notice.component';
 import {SendNoticeComponent} from './send-notice/send-notice.component';
+import {Plan1aComponent} from './plan1a/plan1a.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path: 'kalendarz', component: CalendarComponent},
   {path: 'ogloszenia', component: SendNoticeComponent},
   {path: 'Ogloszenia', component: NoticeComponent},
+  {path: 'plann', component: Plan1aComponent},
 ];
 
 @NgModule({
@@ -38,4 +40,5 @@ const routes: Routes = [
 export class AppRoutingModule { }
 //zaimportowałem ją w app.module w 3 klinijce
 export const RoutingComponent = [StudentsComponent, MainComponent, LoginComponent, PlanComponent, ClassComponent,
-  GradesComponent, TeachersComponent, MessageComponent, DialogComponent, CalendarComponent, SendComponent, NoticeComponent, helpToCalendar, SendNoticeComponent];
+  GradesComponent, TeachersComponent, MessageComponent, DialogComponent, CalendarComponent, SendComponent, NoticeComponent,
+  helpToCalendar, SendNoticeComponent, Plan1aComponent];

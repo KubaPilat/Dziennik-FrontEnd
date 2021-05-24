@@ -17,10 +17,8 @@ export class SendNoticeComponent {
 
   send(): void{
     const data =  {topic: this.topic, text: this.text};
-    // tslint:disable-next-line:triple-equals
     if (this.topic == '' || this.topic == undefined){
       this._snackBar.open('Ogłoszenie musi zawierać temat', 'Zamknij');
-      // tslint:disable-next-line:triple-equals
     } else if (this.text == '' || this.text == undefined ){
       this._snackBar.open('Ogłoszenie musi zawierać treść', 'Zamknij');
     }else{
