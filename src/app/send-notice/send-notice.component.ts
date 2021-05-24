@@ -19,12 +19,18 @@ export class SendNoticeComponent {
   send(): void{
     const data =  {topic: this.topic, text: this.text};
     if (this.topic == '' || this.topic == undefined){
-      this._snackBar.open('Ogłoszenie musi zawierać temat', 'Zamknij');
+      this._snackBar.open('Ogłoszenie musi zawierać temat', 'Zamknij',{
+        duration: 5000
+      });
     } else if (this.text == '' || this.text == undefined ){
-      this._snackBar.open('Ogłoszenie musi zawierać treść', 'Zamknij');
+      this._snackBar.open('Ogłoszenie musi zawierać treść', 'Zamknij',{
+        duration: 5000
+      });
     }else{
       console.log(data);
-      this._snackBar.open('Ogłoszenie zostało wysłane', 'Zamknij');
+      this._snackBar.open('Ogłoszenie zostało wysłane', 'Zamknij',{
+        duration: 5000
+      });
       this._router.navigate(['./', 'stronaGlowna']);
     }
   }
