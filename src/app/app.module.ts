@@ -9,10 +9,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { helpToCalendar } from './demo/demo.component';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/material/material.module';
-import { NoticeComponent } from './notice/notice.component';
-import { SendNoticeComponent } from './send-notice/send-notice.component';
 import { FormsModule } from '@angular/forms';
-import { GradesDetailComponent } from './grades-detail/grades-detail.component';
 
 
 
@@ -21,9 +18,6 @@ import { GradesDetailComponent } from './grades-detail/grades-detail.component';
     AppComponent,
     RoutingComponent,
     CalendarComponent,
-    NoticeComponent,
-    SendNoticeComponent,
-    GradesDetailComponent,
   ],
   imports: [
     BrowserModule,
