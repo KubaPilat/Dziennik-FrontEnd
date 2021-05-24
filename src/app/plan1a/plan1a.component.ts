@@ -10,7 +10,7 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {hours: '08:00 - 08:45', monday: 'His', tuesday:'Biologia', wednesday: 'W-f', thursday:'Informatyka', friday:'Angielski'},
+  {hours: '08:00 - 08:45', monday: '', tuesday:'Biologia', wednesday: 'W-f', thursday:'Informatyka', friday:'Angielski'},
   {hours: '08:55 - 09:40', monday: 'WF', tuesday:'Fizyka', wednesday: 'chemia', thursday:'Biologia', friday:'WF'},
   {hours: '09:50 - 10:35', monday: 'Informatyka', tuesday:'chemia', wednesday: 'Angielski', thursday:'WF', friday:'Polski'},
   {hours: '10:40 - 11:25', monday: 'Polski', tuesday:'Angielski', wednesday: 'Polski', thursday:'chemia', friday:'Informatyka'},

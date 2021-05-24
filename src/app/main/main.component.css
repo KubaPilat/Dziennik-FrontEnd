@@ -16,6 +16,11 @@
   padding: 15px;
 }
 
+.login{
+  color: black;
+  float: right;
+}
+
 .button{
   font-size: 50px;
   background: #FFFFFF;

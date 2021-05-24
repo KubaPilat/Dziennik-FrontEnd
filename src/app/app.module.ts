@@ -12,6 +12,7 @@ import { MaterialModule } from 'src/app/material/material.module';
 import { NoticeComponent } from './notice/notice.component';
 import { SendNoticeComponent } from './send-notice/send-notice.component';
 import { FormsModule } from '@angular/forms';
+import { GradesDetailComponent } from './grades-detail/grades-detail.component';
 
 
 
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     CalendarComponent,
     NoticeComponent,
     SendNoticeComponent,
+    GradesDetailComponent,
   ],
   imports: [
     BrowserModule,
