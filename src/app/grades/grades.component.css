@@ -16,6 +16,10 @@
   padding: 15px;
 }
 
+.button{
+ width: 25%;
+}
+
 table {
   width: 100%;
 }

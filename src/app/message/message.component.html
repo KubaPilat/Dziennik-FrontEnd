@@ -3,13 +3,15 @@
 </div>
 
 <br>
+<a routerLink="/stronaGlowna"><button mat-stroked-button style="color: black; float: right">Wróć do strony głównej</button></a>
+
+<a routerLink="/wiadomosci"><button mat-raised-button class="button">Wyślij Wiadomość</button></a>
+<br>
 
 <mat-form-field>
   <mat-label>Wyszukaj wiadomości:</mat-label>
   <input matInput (keyup)="applyFilter($event)" #input>
 </mat-form-field>
-
-<a routerLink="/wiadomosci"><button mat-raised-button class="button">Wyślij Wiadomość</button></a>
 
 
 <table mat-table [dataSource]="dataSource" >

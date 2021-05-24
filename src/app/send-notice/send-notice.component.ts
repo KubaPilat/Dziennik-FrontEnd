@@ -24,8 +24,7 @@ export class SendNoticeComponent {
     }else{
       console.log(data);
       this._snackBar.open('Ogłoszenie zostało wysłane', 'Zamknij');
-      // this.router.navigate(['/stronaGlowna']);
-      // Zapytac Mateusza a routing w angularze
+      this.router.navigate(['/stronaGlowna']);
     }
   }
 }
