@@ -17,7 +17,7 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 
 export class ClassComponent {
-  displayedColumns: string[] = ['position'];
+  displayedColumns: string[] = ['class'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   ClassFilter(event: Event) {
@@ -27,17 +27,17 @@ export class ClassComponent {
 }
 
 export interface PeriodicElement {
-  position: string;
+  class: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: '1A'},
-  {position: '1B'},
-  {position: '1C'},
-  {position: '2A'},
-  {position: '2B'},
-  {position: '2C'},
-  {position: '3A'},
-  {position: '3B'},
-  {position: '3C'},
+  {class: '1A'},
+  {class: '1B'},
+  {class: '1C'},
+  {class: '2A'},
+  {class: '2B'},
+  {class: '2C'},
+  {class: '3A'},
+  {class: '3B'},
+  {class: '3C'},
 ];

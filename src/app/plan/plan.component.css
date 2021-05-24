@@ -20,6 +20,10 @@
   height:10px;
 }
 
+.text{
+  text-align: center;
+}
+
 table {
   text-align: center;
   width: 100%;

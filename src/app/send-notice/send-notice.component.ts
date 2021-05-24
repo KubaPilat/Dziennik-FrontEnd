@@ -25,7 +25,7 @@ export class SendNoticeComponent {
     }else{
       console.log(data);
       this._snackBar.open('Ogłoszenie zostało wysłane', 'Zamknij');
-      this.router.navigate(['./', 'stronaGlowna']);
+      this._router.navigate(['./', 'stronaGlowna']);
     }
   }
 }
