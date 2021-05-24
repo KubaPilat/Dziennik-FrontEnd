@@ -10,12 +10,17 @@ import {TeachersComponent} from './teachers/teachers.component';
 import {MessageComponent} from './message/message.component';
 import {DialogComponent} from './dialog/dialog.component';
 import {CalendarComponent} from './calendar/calendar.component';
-import {demoComponent} from './demo/demo.component';
+import {helpToCalendar} from './demo/demo.component';
 import {SendComponent} from './send/send.component';
 import {NoticeComponent} from './notice/notice.component';
+import {SendNoticeComponent} from './send-notice/send-notice.component';
+import {Plan1aComponent} from './plan1a/plan1a.component';
+import {GradesDetailComponent} from './grades-detail/grades-detail.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
+  { path: '', component: PageNotFoundComponent },
   {path: 'stronaGlowna', component: MainComponent},
   {path: 'uczniowie', component: StudentsComponent},
   {path: 'logowanie', component: LoginComponent},
@@ -23,10 +28,13 @@ const routes: Routes = [
   {path: 'klasy', component: ClassComponent},
   {path: 'oceny', component: GradesComponent},
   {path: 'nauczyciele', component: TeachersComponent},
-  {path: 'wiadomosci', component: MessageComponent},
+  {path: 'wiadomosci', component: SendComponent},
+  {path: 'Wiadomosci', component: MessageComponent},
   {path: 'kalendarz', component: CalendarComponent},
-  {path: 'wiado', component: SendComponent},
+  {path: 'ogloszenia', component: SendNoticeComponent},
   {path: 'Ogloszenia', component: NoticeComponent},
+  {path: 'plann', component: Plan1aComponent},
+  {path: 'ocenyy', component: GradesDetailComponent},
 ];
 
 @NgModule({
@@ -34,6 +42,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-// przenieś tą stałą do app.module
+//zaimportowałem ją w app.module w 3 klinijce
 export const RoutingComponent = [StudentsComponent, MainComponent, LoginComponent, PlanComponent, ClassComponent,
-  GradesComponent, TeachersComponent, MessageComponent, DialogComponent, CalendarComponent, SendComponent, NoticeComponent, demoComponent];
+  GradesComponent, TeachersComponent, MessageComponent, DialogComponent, CalendarComponent, SendComponent, NoticeComponent,
+  helpToCalendar, SendNoticeComponent, Plan1aComponent, GradesDetailComponent];

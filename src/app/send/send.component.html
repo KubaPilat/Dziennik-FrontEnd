@@ -1,16 +1,43 @@
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <mat-label>Temat</mat-label>
-    <input matInput>
+<div class="nav">
+  <p class="school"> Szkoła Podstawowa </p>
+</div>
+
+<br>
+
+<section class="example-section" id="select">
+  <span class="example-list-section">
+    <mat-checkbox class="example-margin"
+                  [checked]="allComplete"
+                  [indeterminate]="someComplete()"
+                  (change)="setAll($event.checked)">
+      {{task.name}}
+    </mat-checkbox>
+  </span>
+  <span class="example-list-section">
+    <ul>
+      <li *ngFor="let subtask of task.subtasks">
+        <mat-checkbox [(ngModel)]="subtask.completed"
+                      (ngModelChange)="updateAllComplete()">
+          {{subtask.name}}
+        </mat-checkbox>
+      </li>
+    </ul>
+  </span>
+</section>
+
+<div class="arena">
+  <mat-form-field class="form" appearance="fill">
+    <mat-label>Temat: </mat-label>
+    <input matInput [(ngModel)]="topic">
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Treść</mat-label>
-    <textarea matInput></textarea>
+  <mat-form-field class="form" appearance="fill">
+    <mat-label>Treść: </mat-label>
+    <textarea class="text" matInput [(ngModel)]="text"></textarea>
   </mat-form-field>
-</form>
 
-
-<button mat-flat-button>Anuluj</button>
-<button mat-flat-button color="primary" class="send">Wyślij <mat-icon>send</mat-icon> </button>
-
+  <div class="button">
+    <button class="cancel" mat-flat-button routerLink="/Wiadomosci">Anuluj</button>
+    <button class="send" mat-flat-button (click)="send()">Wyślij wiadomość <mat-icon>send</mat-icon></button>
+  </div>
+</div>

@@ -6,10 +6,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
-import { demoComponent } from './demo/demo.component';
+import { helpToCalendar } from './demo/demo.component';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/material/material.module';
-import { NoticeComponent } from './notice/notice.component';
+import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -18,13 +20,14 @@ import { NoticeComponent } from './notice/notice.component';
     AppComponent,
     RoutingComponent,
     CalendarComponent,
-    NoticeComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     AppRoutingModule,
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
@@ -35,6 +38,6 @@ import { NoticeComponent } from './notice/notice.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [demoComponent, MaterialModule]
+  exports: [helpToCalendar, MaterialModule]
 })
 export class AppModule { }

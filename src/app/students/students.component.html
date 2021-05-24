@@ -1,9 +1,9 @@
-<link rel="stylesheet" href="students.component.css">
-
 <div class="nav">
   <p class="school"> Szkoła Podstawowa </p>
 </div>
 
+<br>
+<a routerLink="/stronaGlowna"><button mat-stroked-button style="color: black; float: right">Wróć do strony głównej</button></a>
 <br>
 
 <mat-form-field>
@@ -25,8 +25,7 @@
       <div class="example-element-detail"
            [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
         <div class="example-element-diagram">
-          <div class="example-element-position"> {{element.name}} </div>
-          <div class="example-element-name"> {{element.surname}} </div>
+          <div class="example-element-position"> zdjecie ucznia </div>
         </div>
         <div class="example-element-description">
           {{element.description}}

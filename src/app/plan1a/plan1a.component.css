@@ -16,13 +16,11 @@
   padding: 15px;
 }
 
-
 table {
-  text-align: center;
-  width: 100%;
+  width: 90%;
+  margin: auto;
 }
 
-.mat-form-field {
-  font-size: 14px;
-  width: 100%;
+.hours{
+  width: 100px;
 }

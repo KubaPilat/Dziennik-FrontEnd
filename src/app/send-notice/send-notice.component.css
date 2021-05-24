@@ -16,13 +16,36 @@
   padding: 15px;
 }
 
-
-table {
-  text-align: center;
-  width: 100%;
+.arena{
+  width: 80%;
+  margin: auto;
 }
 
-.mat-form-field {
-  font-size: 14px;
+.form{
   width: 100%;
+  margin: auto;
+}
+
+.info{
+  font-size: 10px;
+  text-align: center;
+}
+
+.text{
+  height: 150px;
+}
+
+.cancel{
+  float: left;
+}
+
+.send{
+  float: right;
+  background-color: #00a5e9;
+  color: white;
+}
+
+.button{
+  width:98%;
+  margin: auto;
 }

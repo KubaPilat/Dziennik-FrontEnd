@@ -1,11 +1,10 @@
 <div class="dialog">
 
-  <p>Nadawca: {{data.nadawca}}</p>
-  <p>Data: {{data.dataWyslania}}</p>
-  <p>Temat: {{data.temat}}</p>
+  <p>Nadawca: {{data.sender}}</p>
+  <p>Data: {{data.date}}</p>
+  <p>Temat: {{data.topic}}</p>
   <p>Treść: {{data.text}}</p>
 
   <button mat-button (click)="closeDialog()">Wyjdź</button>
-               <!--\/ dac linka do odpowiedzi\/  -->
-  <button mat-button (click)="closeDialog()">Odpowiedz</button>
+  <a routerLink="/wiadomosci"><button mat-button class="button" (click)="closeDialog()">Napisz wiadomość</button></a>
 </div>

@@ -10,14 +10,13 @@ import { DialogComponent } from '../dialog/dialog.component';
 })
 
 export class MessageComponent {
-  // nazwy angielskie + enkapsulacja
-  displayedColumns: string[] = ['nadawca', 'temat', 'dataWyslania', 'text'];
+  displayedColumns: string[] = ['sender', 'topic', 'date', 'text'];
   dataSource = new MatTableDataSource<PeriodicElement>();
 
-  applyFilter(event: Event) {
+  applyFilter = (event: Event) => {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+  };
 
   constructor(private dialog: MatDialog) {
   }
@@ -26,44 +25,32 @@ export class MessageComponent {
     this.dataSource = new MatTableDataSource(ELEMENT_DATA);
   }
 
-  openDialog(row: PeriodicElement) {
-    // po co Ci ta stała?
+  openDialog = (row: PeriodicElement) => {
     const dialog = this.dialog.open(DialogComponent, {
       disableClose: true,
       data: row
     });
-  }
+  };
 
 }
 
 export interface PeriodicElement {
-  nadawca: string;
-  temat: string;
-  dataWyslania: string;
+  sender: string;
+  topic: string;
+  date: string;
   text: string;
 }
 
 // proponuje przygotować resta
 const ELEMENT_DATA: PeriodicElement[] = [
-  {nadawca: 'Adam Kruża', temat: 'Zawody', dataWyslania: '15.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet '},
-  {nadawca: 'asd Kruża', temat: 'p', dataWyslania: '15.02.2021', text: 'lorem inpusm doloret mit amet'},
-  {nadawca: '159357 Kruża', temat: 's', dataWyslania: '17.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit'},
-  {nadawca: 'kjgh Kruża', temat: 'd', dataWyslania: '18.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem'},
-  {nadawca: 'try Kruża', temat: 'f', dataWyslania: '19.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm m'},
-  {nadawca: 'jhgf Krjhfuża', temat: 'Zawoddfghy', dataWyslania: '28.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet '},
-  {nadawca: 'asd Krujfgża', temat: 'hgfdp', dataWyslania: '27.02.2021', text: 'lorem inpusm doloret mit amet'},
-  {nadawca: '159357 Krsdfuża', temat: 'sfdsh', dataWyslania: '30.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit'},
-  {nadawca: 'kjgh Kru47ża', temat: 'afdgd', dataWyslania: '25.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem'},
-  {nadawca: 'try Krasduża', temat: 'fgadfg', dataWyslania: '10.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm m'},
-  {nadawca: 'Adam Kruża', temat: 'Zawody', dataWyslania: '15.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet '},
-  {nadawca: 'asd Kruża', temat: 'p', dataWyslania: '15.02.2021', text: 'lorem inpusm doloret mit amet'},
-  {nadawca: '159357 Kruża', temat: 's', dataWyslania: '17.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit'},
-  {nadawca: 'kjgh Kruża', temat: 'd', dataWyslania: '18.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem'},
-  {nadawca: 'try Kruża', temat: 'f', dataWyslania: '19.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm m'},
-  {nadawca: 'jhgf Krjhfuża', temat: 'Zawoddfghy', dataWyslania: '28.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet '},
-  {nadawca: 'asd Krujfgża', temat: 'hgfdp', dataWyslania: '27.02.2021', text: 'lorem inpusm doloret mit amet'},
-  {nadawca: '159357 Krsdfuża', temat: 'sfdsh', dataWyslania: '30.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit'},
-  {nadawca: 'kjgh Kru47ża', temat: 'afdgd', dataWyslania: '25.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem'},
-  {nadawca: 'try Krasduża', temat: 'fgadfg', dataWyslania: '10.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm m'},
+  {sender: 'Adam Kruża', topic: 'Zawody', date: '15.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet '},
+  {sender: 'asd Kruża', topic: 'p', date: '15.02.2021', text: 'lorem inpusm doloret mit amet'},
+  {sender: '159357 Kruża', topic: 's', date: '17.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit'},
+  {sender: 'kjgh Kruża', topic: 'd', date: '18.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem'},
+  {sender: 'try Kruża', topic: 'f', date: '19.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm m'},
+  {sender: 'jhgf Krjhfuża', topic: 'Zawoddfghy', date: '28.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet '},
+  {sender: 'asd Krujfgża', topic: 'hgfdp', date: '27.02.2021', text: 'lorem inpusm doloret mit amet'},
+  {sender: '159357 Krsdfuża', topic: 'sfdsh', date: '30.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit'},
+  {sender: 'kjgh Kru47ża', topic: 'afdgd', date: '25.02.2021', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem'},
 ];
 

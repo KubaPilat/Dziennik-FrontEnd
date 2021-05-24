@@ -27,7 +27,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./grades.component.css']
 })
 export class GradesComponent {
-  displayedColumns: string[] = ['Name', 'surname', 'class'];
+  displayedColumns: string[] = ['Name', 'surname', 'class', 'actions'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   applyFilter(event: Event) {

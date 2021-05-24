@@ -1,0 +1,28 @@
+<div class="nav">
+  <p class="school"> Szkoła Podstawowa </p>
+</div>
+
+<br>
+<a routerLink="/stronaGlowna"><button mat-stroked-button style="color: black; float: right; margin-bottom: 20px;">Wróć do strony głównej</button></a>
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="subject">
+    <th mat-header-cell *matHeaderCellDef> Przedmiot </th>
+    <td mat-cell *matCellDef="let element"> {{element.subject}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="gradesI">
+    <th mat-header-cell *matHeaderCellDef> Oceny I okres </th>
+    <td mat-cell *matCellDef="let element"> {{element.gradesI}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="gradesII">
+    <th mat-header-cell *matHeaderCellDef> Oceny II okres </th>
+    <td mat-cell *matCellDef="let element"> {{element.gradesII}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

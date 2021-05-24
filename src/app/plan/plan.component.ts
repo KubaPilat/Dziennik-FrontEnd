@@ -1,25 +1,15 @@
 // nie potrzebny import
 import {Component, OnInit} from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
 import {MatTableDataSource} from '@angular/material/table';
+
 @Component({
   selector: 'app-plan',
   templateUrl: './plan.component.html',
   styleUrls: ['./plan.component.css'],
-  animations: [
-
-    // po co to?
-    trigger('detailExpand', [
-      state('collapsed', style({height: '0px', minHeight: '0'})),
-      state('expanded', style({height: '*'})),
-      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-    ]),
-  ],
 })
 
 export class PlanComponent {
-  // enkapsulacja
-  displayedColumns: string[] = ['position'];
+  displayedColumns: string[] = ['class', 'actions'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   ClassFilter(event: Event) {
@@ -29,17 +19,17 @@ export class PlanComponent {
 }
 
 export interface PeriodicElement {
-  position: string;
+  class: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: '1A'},
-  {position: '1B'},
-  {position: '1C'},
-  {position: '2A'},
-  {position: '2B'},
-  {position: '2C'},
-  {position: '3A'},
-  {position: '3B'},
-  {position: '3C'},
+  {class: '1A'},
+  {class: '1B'},
+  {class: '1C'},
+  {class: '2A'},
+  {class: '2B'},
+  {class: '2C'},
+  {class: '3A'},
+  {class: '3B'},
+  {class: '3C'},
 ];
