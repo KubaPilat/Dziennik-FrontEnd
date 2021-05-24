@@ -18,9 +18,9 @@ import {MatTableDataSource} from '@angular/material/table';
 
 export class StudentsComponent {
   dataSource = new MatTableDataSource(ELEMENT_DATA);
-  columnsToDisplay = ['name', 'Surname', 'class', 'plan' ];
+  columnsToDisplay = ['name', 'Surname', 'class'];
   expandedElement: PeriodicElement | null | undefined;
-  displayedColumns: string[] = ['name', 'Surname', 'class', 'plan'];
+  displayedColumns: string[] = ['name', 'Surname', 'class'];
   ELEMENT_DATA: any;
 
   applyFilter(event: Event) {
@@ -35,7 +35,6 @@ export interface PeriodicElement {
   Surname: string;
   class: string;
   description: string;
-  plan: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
@@ -44,13 +43,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
     Surname: 'Piłat',
     class: '1A',
     description: `nr. tel:987654321`,
-    plan: 'plan'
   }, {
     name: 'Mateusz',
     Surname: 'Ładyko',
     class: '1A',
     description: `nr. tel:987654321`,
-    plan: 'plan'
   },
 ];
 
