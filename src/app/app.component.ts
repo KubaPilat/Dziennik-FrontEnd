@@ -20,10 +20,16 @@ export class AppComponent {
       console.log(posts);
     });}
 
+  getTitle(){
+    this.httpService.getPost(2).subscribe(posts =>{
+      console.log(posts.title);
+    });}
+
   getPostById(){
-    this.httpService.getPostById(1).subscribe(posts =>{
-      console.log(posts);
-  });}
+    for (let i=0; i<5; i++){
+      this.httpService.getPostById(1).subscribe(posts => {
+       console.log(posts);})
+    };}
 
 }
 
