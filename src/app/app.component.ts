@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpService } from './http.service'
 
 @Component({
   selector: 'app-root',
@@ -7,29 +6,29 @@ import { HttpService } from './http.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private  httpService: HttpService) {}
+  // constructor(private  httpService: HttpService) {}
   title = 'dziennik';
 
-  getPosts(){
-  this.httpService.getPosts().subscribe(posts =>{
-    console.log(posts);
-  });}
-
-  getPost(){
-    this.httpService.getPost(2).subscribe(posts =>{
-      console.log(posts);
-    });}
-
-  getTitle(){
-    this.httpService.getPost(2).subscribe(posts =>{
-      console.log(posts.title);
-    });}
-
-  getPostById(){
-    for (let i=0; i<5; i++){
-      this.httpService.getPostById(1).subscribe(posts => {
-       console.log(posts);})
-    };}
+  // getPosts(){
+  // this.httpService.getPosts().subscribe(posts =>{
+  //   console.log(posts);
+  // });}
+  //
+  // getPost(){
+  //   this.httpService.getPost(2).subscribe(posts =>{
+  //     console.log(posts);
+  //   });}
+  //
+  // getTitle(){
+  //   this.httpService.getPost(2).subscribe(posts =>{
+  //     console.log(posts.title);
+  //   });}
+  //
+  // getPostById(){
+  //   for (let i=0; i<5; i++){
+  //     this.httpService.getPostById(1).subscribe(posts => {
+  //      console.log(posts);})
+  //   };}
 
 }
 

@@ -20,7 +20,7 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
-  //{path: '', component: PageNotFoundComponent },
+  {path: '', component: PageNotFoundComponent },
   {path: 'stronaGlowna', component: MainComponent},
   {path: 'uczniowie', component: StudentsComponent},
   {path: 'logowanie', component: LoginComponent},
