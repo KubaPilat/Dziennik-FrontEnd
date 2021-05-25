@@ -19,8 +19,7 @@ export class HttpService {
   }
 
   getPostById(UserId: number):Observable<Post>{
-    const param = new HttpParams().set('userId', '1');
-    return this.http.get<Post>('https://jsonplaceholder.typicode.com/posts/' + {params: param});
+    return this.http.get<Post>('https://jsonplaceholder.typicode.com/comments?postId=' + UserId);
   }
 
 
