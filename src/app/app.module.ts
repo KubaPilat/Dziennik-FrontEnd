@@ -12,8 +12,7 @@ import { MaterialModule } from 'src/app/material/material.module';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpService } from './http.service';
-
+import { ApiService } from './class/api.service'
 
 @NgModule({
   declarations: [
@@ -36,7 +35,7 @@ import { HttpService } from './http.service';
     CommonModule,
     CalendarModule,
   ],
-  providers: [HttpService],
+  providers: [ApiService],
   bootstrap: [AppComponent],
   exports: [helpToCalendar, MaterialModule]
 })
