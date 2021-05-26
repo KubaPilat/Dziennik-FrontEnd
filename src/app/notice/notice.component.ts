@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import {ApiService} from '../api.service';
 
 @Component({
   selector: 'app-notice',
@@ -7,9 +8,20 @@ import { Component} from '@angular/core';
 })
 export class NoticeComponent {
 
-  members: {topic: string, date: string, sender: string, text: string}[] = [
-    {topic: 'przypomnienie', date: '12.05.2021r.', sender: 'Kuba', text: 'lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet lorem inpusm doloret mit amet'},
-    {topic: 'przypomnienie', date: '12.05.2021r.', sender: 'Kuba', text: 'ncvbcvb'},
-  ];
 
+  user: any[] = [];
+
+  constructor(private service: ApiService){
+    this.service.getDatacomments().then(data => {
+      this.user = data;
+    });
+  }
+}
+
+
+export interface Data {
+  name: string;
+  body: string;
+  email: string;
+  id: number;
 }
