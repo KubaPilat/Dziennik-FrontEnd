@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {MatTableDataSource} from '@angular/material/table';
+import { HttpService } from '../http.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-class',
@@ -17,17 +19,38 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 
 export class ClassComponent {
+
+  constructor(private  httpService: HttpService) {}
+
   displayedColumns: string[] = ['class'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
+  allPosts$: any;
 
   ClassFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
+
+  // @ts-ignore
+  allPosts$: Observable<Array<Post>>;
+
+  getTitle(){
+    this.allPosts$ = this.httpService.getPost(2);
+  }
+
 }
 
 export interface PeriodicElement {
   class: string;
+}
+
+export interface Post {
+  userId: number;
+  id: number;
+  title: string;
+  name: string;
+  body: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
