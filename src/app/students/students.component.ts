@@ -23,10 +23,10 @@ export class StudentsComponent {
   displayedColumns: string[] = ['name', 'Surname', 'class'];
   ELEMENT_DATA: any;
 
-  // applyFilter(event: Event) {
-  //   const filterValue = (event.target as HTMLInputElement).value;
-  //   this.dataSource.filter = filterValue.trim().toLowerCase();
-  // }
+  applyFilter = (event: Event) => {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  };
 }
 
 

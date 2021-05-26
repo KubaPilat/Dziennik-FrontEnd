@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {MatTableDataSource} from '@angular/material/table';
 
@@ -22,10 +22,10 @@ export class TeachersComponent {
   displayedColumns: string[] = ['name',  'Surname'];
   ELEMENT_DATA: any;
 
-  applyFilter(event: Event) {
+  applyFilter = (event: Event) => {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+  };
 }
 
 
