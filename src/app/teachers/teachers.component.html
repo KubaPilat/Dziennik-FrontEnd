@@ -6,10 +6,10 @@
 <a routerLink="/stronaGlowna"><button mat-stroked-button style="color: black; float: right">Wróć do strony głównej</button></a>
 <br>
 
-<mat-form-field>
-  <mat-label>Wyszukaj Nauczyciela</mat-label>
-  <input matInput (keyup)="applyFilter($event)" placeholder="Adam Kruża" >
-</mat-form-field>
+<!--<mat-form-field>-->
+<!--  <mat-label>Wyszukaj Nauczyciela</mat-label>-->
+<!--  <input matInput (keyup)="applyFilter($event)" placeholder="Adam Kruża" >-->
+<!--</mat-form-field>-->
 
 
 <table mat-table
@@ -24,21 +24,18 @@
     <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
       <div class="example-element-detail"
            [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
-        <div class="example-element-diagram">
-          <div class="example-element-position"> Zdjęcie </div>
-        </div>
         <div class="example-element-description">
-          {{element.description}}
+          {{element.website}}
         </div>
       </div>
     </td>
   </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-  <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let element; columns: displayedColumns;"
       class="example-element-row"
-      [class.example-expanded-row]="expandedElement === element"
-      (click)="expandedElement = expandedElement === element ? null : element">
+      [class.example-expanded-row]="columnsToDisplay === element"
+      (click)="columnsToDisplay = columnsToDisplay === element ? null : element">
   </tr>
   <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
 </table>
