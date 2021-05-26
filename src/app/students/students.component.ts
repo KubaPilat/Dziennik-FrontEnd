@@ -6,7 +6,7 @@ import {MatTableDataSource} from '@angular/material/table';
   selector: 'app-students',
   templateUrl: './students.component.html',
   styleUrls: ['./students.component.css'],
-  //animacja jest potrzebna do otwierania paneli
+  // animacja jest potrzebna do otwierania paneli
   animations: [
     trigger('detailExpand', [
       state('collapsed', style({height: '0px', minHeight: '0'})),
@@ -23,10 +23,10 @@ export class StudentsComponent {
   displayedColumns: string[] = ['name', 'Surname', 'class'];
   ELEMENT_DATA: any;
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+  // applyFilter(event: Event) {
+  //   const filterValue = (event.target as HTMLInputElement).value;
+  //   this.dataSource.filter = filterValue.trim().toLowerCase();
+  // }
 }
 
 

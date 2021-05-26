@@ -1,13 +1,12 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {MatTableDataSource} from '@angular/material/table';
-import { ApiService } from './api.service';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-class',
   templateUrl: './class.component.html',
   styleUrls: ['./class.component.css'],
-  //to samo co w student panele
+  // to samo co w student panele
   animations: [
     trigger('detailExpand', [
       state('collapsed', style({height: '0px', minHeight: '0'})),
@@ -19,17 +18,12 @@ import { ApiService } from './api.service';
 
 export class ClassComponent {
 
-  // ClassFilter(event: Event) {
-  //   const filterValue = (event.target as HTMLInputElement).value;
-  //   this.dataSource.filter = filterValue.trim().toLowerCase();
-  // }
-
   displayedColumns: string[] = ['id'];
 
-  dataSource : any[] = [];
+  dataSource: any[] = [];
 
-  constructor(private service : ApiService){
-    this.service.getData().then(data => {
+  constructor(private service: ApiService){
+    this.service.getDataUsers().then(data => {
       this.dataSource = data;
     });
   }

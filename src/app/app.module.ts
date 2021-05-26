@@ -12,7 +12,7 @@ import { MaterialModule } from 'src/app/material/material.module';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { ApiService } from './class/api.service'
+import { ApiService } from './api.service'
 
 @NgModule({
   declarations: [

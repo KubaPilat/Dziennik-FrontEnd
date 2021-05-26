@@ -1,24 +1,5 @@
 import {Component} from '@angular/core';
-import {MatTableDataSource} from '@angular/material/table';
-
-export interface PeriodicElement {
-  Name: string;
-  surname: string;
-  class: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {Name: 'Kuba', surname: 'Piłat', class: '1A'},
-  {Name: 'Kuba', surname: 'Piłat', class: '1B'},
-  {Name: 'Kuba', surname: 'Piłat', class: '1C'},
-  {Name: 'Kuba', surname: 'Piłat', class: '2A'},
-  {Name: 'Kuba', surname: 'Piłat', class: '2B'},
-  {Name: 'Kuba', surname: 'Piłat', class: '2C'},
-  {Name: 'Kuba', surname: 'Piłat', class: '3A'},
-  {Name: 'Kuba', surname: 'Piłat', class: '3B'},
-  {Name: 'Kuba', surname: 'Piłat', class: '3C'},
-];
-
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-grades',
@@ -26,11 +7,19 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./grades.component.css']
 })
 export class GradesComponent {
-  displayedColumns: string[] = ['Name', 'surname', 'class', 'actions'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  displayedColumns: string[] = ['id', 'name', 'username', 'actions'];
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+  dataSource: any[] = [];
+
+  constructor(private service: ApiService){
+    this.service.getDataUsers().then(data => {
+      this.dataSource = data;
+    });
   }
+}
+
+export interface Data {
+  id: number;
+  name: string;
+  username: string;
 }
