@@ -26,6 +26,10 @@ table{
   background-color: #00a5e9;
 }
 
+.header{
+  text-align: center;
+}
+
 tr.example-detail-row {
   height: 0;
 }
@@ -40,6 +44,7 @@ tr.example-element-row:not(.example-expanded-row):active {
 
 .example-element-row td {
   border-bottom-width: 0;
+  text-align: center;
 }
 
 .example-element-detail {
@@ -49,7 +54,7 @@ tr.example-element-row:not(.example-expanded-row):active {
 
 .example{
   margin: auto auto 10px;
-  border: 1px solid black;
+  border: 1px solid #E0E0E0;
   border-radius: 2px;
   padding: 10px;
   font-family: Roboto, serif;
