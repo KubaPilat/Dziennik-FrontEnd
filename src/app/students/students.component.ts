@@ -19,7 +19,7 @@ import {ApiService} from '../api.service';
 export class StudentsComponent {
   columnsToDisplay: string[] = ['name', 'email'];
   expandedElement: Data | null | undefined;
-  displayedColumns: string[] = ['name', 'phone', 'email', 'website', 'phone', 'company', 'address'];
+  displayedColumns: string[] = ['name', 'phone', 'email', 'website', 'phone', 'id', 'address'];
   dataSource: any[] = [];
 
   constructor(private service: ApiService){
