@@ -13,7 +13,7 @@ export class PlanComponent {
   dataSource: any[] = [];
 
   constructor(private service: ApiService){
-    this.service.getDatacomments().then(data => {
+    this.service.getDataUsers().then(data => {
       this.dataSource = data;
     });
   }

@@ -17,11 +17,9 @@ import {ApiService} from '../api.service';
 
 export class TeachersComponent {
 
-
-  columnsToDisplay: string[] = ['name', 'phone', 'email', 'website'];
+  columnsToDisplay: string[] = ['name', 'email'];
   expandedElement: Data | null | undefined;
-  displayedColumns: string[] = ['name',  'email'];
-
+  displayedColumns: string[] = ['name', 'phone', 'email', 'website'];
   dataSource: any[] = [];
 
   constructor(private service: ApiService){
@@ -30,15 +28,6 @@ export class TeachersComponent {
     });
   }
 
-
-  // dataSource = new MatTableDataSource(ELEMENT_DATA);
-  // columnsToDisplay = ['name', 'Surname'];
-  // ELEMENT_DATA: any;
-  //
-  // applyFilter = (event: Event) => {
-  //   const filterValue = (event.target as HTMLInputElement).value;
-  //   this.dataSource.filter = filterValue.trim().toLowerCase();
-  // }
 }
 
 export interface Data {
