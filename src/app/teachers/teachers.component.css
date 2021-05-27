@@ -55,7 +55,3 @@ tr.example-element-row:not(.example-expanded-row):active {
   margin: 8px 0;
   height: 104px;
 }
-
-#test{
-  border: 1px solid green;
-}
