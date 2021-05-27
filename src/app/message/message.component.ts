@@ -1,18 +1,24 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { DialogComponent } from '../dialog/dialog.component';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-message',
   templateUrl: './message.component.html',
-  styleUrls: ['./message.component.css']
+  styleUrls: ['./message.component.css'],
+  animations: [
+    trigger('detailExpand', [
+      state('collapsed', style({height: '0px', minHeight: '0'})),
+      state('expanded', style({height: '*'})),
+      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+    ]),
+  ],
 })
 
 export class MessageComponent {
-
-  displayedColumns: string[] = ['name', 'body', 'email', 'id'];
-
+  columnsToDisplay: string[] = ['id', 'email'];
+  expandedElement: Data | null | undefined;
+  displayedColumns: string[] = ['body'];
   dataSource: any[] = [];
 
   constructor(private service: ApiService){
@@ -20,19 +26,10 @@ export class MessageComponent {
       this.dataSource = data;
     });
   }
-  // constructor(private dialog: MatDialog) {
-  // }
-  // openDialog = ({row}: ) => {
-  //   const dialog = this.dialog.open(DialogComponent, {
-  //     disableClose: true,
-  //     data: row
-  //   });
-  // }
 }
 
 export interface Data {
   name: string;
-  body: string;
   email: string;
-  id: number;
+  body: string;
 }
