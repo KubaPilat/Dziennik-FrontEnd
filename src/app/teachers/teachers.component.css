@@ -26,6 +26,17 @@ table {
   width: 100%;
 }
 
+.example{
+  margin: 10px;
+  border: 1px solid #E0E0E0;
+  border-radius: 2px;
+  padding: 10px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+}
+
 tr.example-detail-row {
   height: 0;
 }
