@@ -6,11 +6,6 @@
 <a routerLink="/stronaGlowna"><button mat-stroked-button style="color: black; float: right">Wróć do strony głównej</button></a>
 <br>
 
-<mat-form-field>
-  <mat-label>Wyszukaj Ucznia</mat-label>
-  <input matInput (keyup)="applyFilter($event)" placeholder="Jakub Piłat" >
-</mat-form-field>
-
 
 <table mat-table
        [dataSource]="dataSource" multiTemplateDataRows
@@ -25,10 +20,11 @@
       <div class="example-element-detail"
            [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
         <div class="example-element-diagram">
-          <div class="example-element-position"> zdjecie ucznia </div>
-        </div>
-        <div class="example-element-description">
-          {{element.description}}
+          <div class="example-element">Telefon: {{element.phone}} </div>
+          <div class="example-element">E-mail: {{element.email}} </div>
+          <div class="example-element">Strona internetowa: {{element.website}} </div>
+          <div class="example-element">Firma: {{element.company.name}} </div>
+          <div class="example-element">Adres: {{element.address.street}} </div>
         </div>
       </div>
     </td>
@@ -40,6 +36,6 @@
       [class.example-expanded-row]="expandedElement === element"
       (click)="expandedElement = expandedElement === element ? null : element">
   </tr>
-  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row" ></tr>
 </table>
 

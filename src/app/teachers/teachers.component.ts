@@ -16,7 +16,6 @@ import {ApiService} from '../api.service';
 })
 
 export class TeachersComponent {
-
   columnsToDisplay: string[] = ['name', 'email'];
   expandedElement: Data | null | undefined;
   displayedColumns: string[] = ['name', 'phone', 'email', 'website', 'phone', 'company', 'address'];
