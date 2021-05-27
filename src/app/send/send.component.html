@@ -28,12 +28,16 @@
 <div class="arena">
   <mat-form-field class="form" appearance="fill">
     <mat-label>Temat: </mat-label>
-    <input matInput [(ngModel)]="topic">
+    <label>
+      <input matInput [(ngModel)]="topic">
+    </label>
   </mat-form-field>
 
   <mat-form-field class="form" appearance="fill">
     <mat-label>Treść: </mat-label>
-    <textarea class="text" matInput [(ngModel)]="text"></textarea>
+    <label>
+      <textarea class="text" matInput [(ngModel)]="text"></textarea>
+    </label>
   </mat-form-field>
 
   <div class="button">
