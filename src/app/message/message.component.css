@@ -50,6 +50,7 @@ tr.example-element-row:not(.example-expanded-row):active {
 .example{
   margin: auto auto 10px;
   border: 1px solid black;
+  border-radius: 2px;
   padding: 10px;
   font-family: Roboto, serif;
   font-style: normal;
