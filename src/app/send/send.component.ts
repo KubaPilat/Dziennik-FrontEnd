@@ -42,7 +42,7 @@ export class SendComponent {
       this._snackBar.open('Wiadomość musi zawierać treść', 'Zamknij');
     } else {
       console.log(data);
-      this.httpClient.post(`https://my-json-server.typicode.com/techsithgit/json-faker-directory/profiles/`,
+      this.httpClient.post(`https://jsonplaceholder.typicode.com/comments`,
         {data}).subscribe()
       this._snackBar.open('Wiadomość zostało wysłane', 'Zamknij');
       this._router.navigate(['./', 'stronaGlowna']);
