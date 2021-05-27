@@ -22,7 +22,6 @@ export class MessageComponent {
   }
   // constructor(private dialog: MatDialog) {
   // }
-
   // openDialog = ({row}: ) => {
   //   const dialog = this.dialog.open(DialogComponent, {
   //     disableClose: true,
