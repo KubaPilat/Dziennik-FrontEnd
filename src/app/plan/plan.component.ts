@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {ApiService} from '../api.service';
 
 @Component({
@@ -17,10 +17,6 @@ export class PlanComponent {
       this.dataSource = data;
     });
   }
-  // ClassFilter = (event: Event) => {
-  //   const filterValue = (event.target as HTMLInputElement).value;
-  //   this.data.filter = filterValue.trim().toLowerCase();
-  // }
 }
 
 export interface Data {

@@ -7,8 +7,6 @@ import {ApiService} from '../api.service';
   styleUrls: ['./notice.component.css']
 })
 export class NoticeComponent {
-
-
   user: any[] = [];
 
   constructor(private service: ApiService){
@@ -17,7 +15,6 @@ export class NoticeComponent {
     });
   }
 }
-
 
 export interface Data {
   name: string;

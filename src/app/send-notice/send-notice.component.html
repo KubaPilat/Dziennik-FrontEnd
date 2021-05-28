@@ -2,20 +2,23 @@
   <p class="school"> Szkoła Podstawowa </p>
 </div>
 
-<br>
-
 <div class="arena">
   <mat-form-field class="form" appearance="fill">
     <mat-label>Temat: </mat-label>
-    <input matInput [(ngModel)]="topic">
+    <label>
+      <input matInput [(ngModel)]="topic">
+    </label>
   </mat-form-field>
 
   <mat-form-field class="form" appearance="fill">
     <mat-label>Treść: </mat-label>
-    <textarea class="text" matInput [(ngModel)]="text"></textarea>
+    <label>
+      <textarea class="text" matInput [(ngModel)]="text"></textarea>
+    </label>
   </mat-form-field>
 
   <p class="info">Pamiętaj że ogłoszenia są dostępne dla każdego użytkownika.</p>
+
   <div class="button">
     <button class="cancel" mat-raised-button routerLink="/Ogloszenia">Anuluj</button>
     <button class="send" mat-raised-button (click)="send()">Wyślij <mat-icon>send</mat-icon> </button>

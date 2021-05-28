@@ -8,14 +8,13 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './send-notice.component.html',
   styleUrls: ['./send-notice.component.css']
 })
+
 export class SendNoticeComponent {
 
   topic!: string;
   text!: string;
-  router: any;
 
   constructor(private _snackBar: MatSnackBar, private _router:Router, private httpClient:HttpClient){}
-
 
   send(): void {
     const data = {topic: this.topic, text: this.text};

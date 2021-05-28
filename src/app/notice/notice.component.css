@@ -16,33 +16,28 @@
   padding: 15px;
 }
 
+.main{
+  color: black;
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .button{
   color: white;
   float: left;
   background-color: #00a5e9;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .card{
   margin: auto;
   width: 50%;
   padding: 10px;
-  /*border: 3px solid red;*/
-}
-
-.header{
-  /*border: 3px solid green;*/
-}
-
-
-/*border: 3px solid ...; is to know what is where */
-
-
-.content{
-  /*border: 3px solid blue;*/
 }
 
 .clap{
-  /*border: 3px solid pink;*/
   margin: 50px;
   background-color: rgba(238, 238, 238, 0.48);
 }
