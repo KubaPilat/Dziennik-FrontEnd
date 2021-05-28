@@ -6,9 +6,9 @@ import { ApiService } from '../api.service';
   selector: 'app-class',
   templateUrl: './class.component.html',
   styleUrls: ['./class.component.css'],
-  // to samo co w student panele
+  // to samo co w student panele, ponownie ;)
   animations: [
-    // to w jakim celu jest?
+    // to w jakim celu jest?, ponownie ;)
     trigger('detailExpand', [
       state('collapsed', style({height: '0px', minHeight: '0'})),
       state('expanded', style({height: '*'})),
@@ -19,8 +19,10 @@ import { ApiService } from '../api.service';
 
 export class ClassComponent {
 
+  // eksapsulacja
   displayedColumns: string[] = ['id'];
 
+    // eksapsulacja, czemu any?
   dataSource: any[] = [];
 
   constructor(private service: ApiService){

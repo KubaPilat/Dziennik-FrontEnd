@@ -7,8 +7,9 @@ import { ApiService } from '../api.service';
   styleUrls: ['./grades.component.css']
 })
 export class GradesComponent {
+  // enkapsulacja
   displayedColumns: string[] = ['id', 'name', 'username', 'actions'];
-
+// enkapsulacja, czemu any?
   dataSource: any[] = [];
 
   constructor(private service: ApiService){
@@ -18,6 +19,7 @@ export class GradesComponent {
   }
 }
 
+// modele wyciągamy do innego katalogu bo przeważnie sa one reużywalne w innych plikach
 export interface Data {
   id: number;
   name: string;

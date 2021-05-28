@@ -1,8 +1,13 @@
 1. Podziel na moduły funkcyjne np.
 - views i tutaj podział widoków w zależności gdzie sa wykorzystywane
 - common/views tutaj trzymaj rzeczy które są powtarzalne w całej apce lub rzeczy typowe do działania apki np. navbar i login
-2. Nie zaczynaj kilku rzeczy na raz tylko skończ jedna poprawnie i bierz się za następne, jak coś to pytaj :)
 
 
-OPCJONALNE NA PRZYSZŁOŚĆ:
+NA PRZYSZŁOŚĆ:
 1. Wydzielenie modułów w aplikacji, akutlanie wszystko ma do wszystkiego dostęp
+2. Korzystanie z obiektowości, czyli całego dziedziczenia, nie musisz definiować za kazdym razem wszystkiego wystarczy że to rodzic ma
+3. Przerób sobie Angulara porzadnie
+4. Bootstrap
+5. Angular Material
+6. Wystawianie angulara na serwer zewnętrzny czyli jak budować werjsę tylko na proda etc.
+7. I rób projekty, im więcej tym lepiej

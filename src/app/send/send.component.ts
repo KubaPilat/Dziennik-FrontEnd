@@ -53,6 +53,7 @@ export class SendComponent {
     this.allComplete = this.task.subtasks != null && this.task.subtasks.every(t => t.completed);
   }
 
+  //findComplete
   someComplete(): boolean {
     if (this.task.subtasks == null) {
       return false;
@@ -60,6 +61,7 @@ export class SendComponent {
     return this.task.subtasks.filter(t => t.completed).length > 0 && !this.allComplete;
   }
 
+  // saveCompleted
   setAll(completed: boolean) {
     this.allComplete = completed;
     if (this.task.subtasks == null) {

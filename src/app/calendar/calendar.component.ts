@@ -1,3 +1,4 @@
+// zbędny import
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CalendarEvent, CalendarView } from 'angular-calendar';
 
@@ -6,14 +7,14 @@ import { CalendarEvent, CalendarView } from 'angular-calendar';
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.css']
 })
-// Potrzebujesz całego komponentu do kalendarza, sam anuglar datepicker nie wystarcza?
+// Potrzebujesz całego komponentu do kalendarza, sam anuglar datepicker nie wystarcza?, ponownie ;)
 export class CalendarComponent {
 
-  // enkapsulacja
+  // enkapsulacja, ponownie ;)
   view: CalendarView = CalendarView.Month;
-
+// enkapsulacja
   viewDate: Date = new Date();
-
+// enkapsulacja
   events: CalendarEvent[] = [
     {
       title: 'Editable event',

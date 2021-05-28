@@ -16,7 +16,10 @@ import { ApiService } from '../api.service';
 })
 
 export class MessageComponent {
+  // enkapsulacja
   columnsToDisplay: string[] = ['id', 'email'];
+
+  // czyli czym to ma być? Wszystkim? enkapsulacja
   expandedElement: Data | null | undefined;
   displayedColumns: string[] = ['body'];
   dataSource: any[] = [];

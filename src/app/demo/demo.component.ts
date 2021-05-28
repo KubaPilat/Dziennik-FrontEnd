@@ -5,6 +5,7 @@ import { CalendarView } from 'angular-calendar';
   selector: 'mwl-demo-utils-calendar-header',
   templateUrl: `./demo.component.html`,
 })
+// CamelCase, nazwa komponentu nie jest zgoda z plikiem, wprowadza to w błąd
 export class helpToCalendar {
   // @ts-ignore
   @Input() view: CalendarView;

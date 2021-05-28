@@ -25,7 +25,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './plan1a.component.html',
   styleUrls: ['./plan1a.component.css']
 })
-
+// PlanComponent ogólny -> reszte to są jego dzieci :)
 export class Plan1aComponent{
   displayedColumns: string[] = ['hours', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
   dataSource = ELEMENT_DATA;

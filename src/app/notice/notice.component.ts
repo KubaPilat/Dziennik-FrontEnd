@@ -8,7 +8,7 @@ import {ApiService} from '../api.service';
 })
 export class NoticeComponent {
 
-
+// enkapsulacja, any?
   user: any[] = [];
 
   constructor(private service: ApiService){
