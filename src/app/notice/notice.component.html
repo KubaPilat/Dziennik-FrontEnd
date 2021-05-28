@@ -4,16 +4,20 @@
 
 <br>
 
-<a routerLink="/stronaGlowna"><button mat-stroked-button style="color: black; float: right">Wróć do strony głównej</button></a>
-<a routerLink="/ogloszenia"><button mat-raised-button class="button">Napisz ogłoszenie </button></a>
+<a routerLink="/stronaGlowna">
+  <button mat-stroked-button style="color: black; float: right">Wróć do strony głównej</button>
+</a>
+<a routerLink="/ogloszenia">
+  <button mat-raised-button class="button">Napisz ogłoszenie </button>
+</a>
 
 <div class="card" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px">
-  <mat-card class="clap" *ngFor="let member of members" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
+  <mat-card class="clap" *ngFor="let element of user" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
     <mat-card-header class="header">
-      <mat-card-title>Temat: {{member.topic}}</mat-card-title>
-      <mat-card-title>Data: {{member.date}}</mat-card-title>
-      <mat-card-title>Nadawca: {{member.sender}}</mat-card-title>
+      <mat-card-title>Temat: {{element.name}}</mat-card-title>
+      <mat-card-title>Data: {{element.id}}</mat-card-title>
+      <mat-card-title>Nadawca: {{element.email}}</mat-card-title>
     </mat-card-header>
-    <mat-card-content class="content">Treść: {{member.text}} </mat-card-content>
+    <mat-card-content class="content">Treść: {{element.body}} </mat-card-content>
   </mat-card>
 </div>

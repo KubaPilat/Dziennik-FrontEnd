@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {MatTableDataSource} from '@angular/material/table';
+import {ApiService} from '../api.service';
 
 @Component({
   selector: 'app-students',
   templateUrl: './students.component.html',
   styleUrls: ['./students.component.css'],
-  //animacja jest potrzebna do otwierania paneli
+  // animacja jest potrzebna do otwierania paneli
   animations: [
     trigger('detailExpand', [
       state('collapsed', style({height: '0px', minHeight: '0'})),
@@ -17,37 +17,22 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 // analogicznie jak w komponencie class
 export class StudentsComponent {
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
-  columnsToDisplay = ['name', 'Surname', 'class'];
-  expandedElement: PeriodicElement | null | undefined;
-  displayedColumns: string[] = ['name', 'Surname', 'class'];
-  ELEMENT_DATA: any;
+  columnsToDisplay: string[] = ['name', 'email'];
+  expandedElement: Data | null | undefined;
+  displayedColumns: string[] = ['name', 'phone', 'email', 'website', 'phone', 'id', 'address'];
+  dataSource: any[] = [];
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+  constructor(private service: ApiService){
+    this.service.getDataUsers().then(data => {
+      this.dataSource = data;
+    });
   }
+
 }
 
-
-export interface PeriodicElement {
+export interface Data {
   name: string;
-  Surname: string;
-  class: string;
-  description: string;
+  phone: string;
+  email: string;
+  website: string;
 }
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {
-    name: 'Jakub',
-    Surname: 'Piłat',
-    class: '1A',
-    description: `nr. tel:987654321`,
-  }, {
-    name: 'Mateusz',
-    Surname: 'Ładyko',
-    class: '1A',
-    description: `nr. tel:987654321`,
-  },
-];
-

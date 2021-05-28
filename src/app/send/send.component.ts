@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { HttpClient } from '@angular/common/http';
 
 export interface Task {
   name: string;
@@ -18,7 +19,7 @@ export class SendComponent {
   topic!: string;
   text!: string;
 
-  constructor(private _snackBar: MatSnackBar, private _router:Router) {}
+  constructor(private _snackBar: MatSnackBar, private _router:Router, private httpClient:HttpClient){}
 
 
   task: Task = {
@@ -41,6 +42,8 @@ export class SendComponent {
       this._snackBar.open('Wiadomość musi zawierać treść', 'Zamknij');
     } else {
       console.log(data);
+      this.httpClient.post(`https://jsonplaceholder.typicode.com/comments`,
+        {data}).subscribe()
       this._snackBar.open('Wiadomość zostało wysłane', 'Zamknij');
       this._router.navigate(['./', 'stronaGlowna']);
     }

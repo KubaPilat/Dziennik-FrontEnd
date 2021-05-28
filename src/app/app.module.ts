@@ -11,18 +11,17 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/material/material.module';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
-
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './api.service'
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutingComponent,
     CalendarComponent,
-    PageNotFoundComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     MaterialModule,
     AppRoutingModule,
@@ -36,7 +35,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     CommonModule,
     CalendarModule,
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent],
   exports: [helpToCalendar, MaterialModule]
 })

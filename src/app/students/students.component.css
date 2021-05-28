@@ -47,6 +47,17 @@ tr.example-element-row:not(.example-expanded-row):active {
   display: flex;
 }
 
+.example{
+  margin: 10px;
+  border: 1px solid #E0E0E0;
+  border-radius: 2px;
+  padding: 10px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+}
+
 .example-element-diagram {
   min-width: 80px;
   border: 2px solid black;

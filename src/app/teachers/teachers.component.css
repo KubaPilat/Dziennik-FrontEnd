@@ -26,6 +26,17 @@ table {
   width: 100%;
 }
 
+.example{
+  margin: 10px;
+  border: 1px solid #E0E0E0;
+  border-radius: 2px;
+  padding: 10px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+}
+
 tr.example-detail-row {
   height: 0;
 }
@@ -54,8 +65,4 @@ tr.example-element-row:not(.example-expanded-row):active {
   font-weight: lighter;
   margin: 8px 0;
   height: 104px;
-}
-
-#test{
-  border: 1px solid green;
 }

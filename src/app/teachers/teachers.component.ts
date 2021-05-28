@@ -1,7 +1,6 @@
-// nie potrzebne importy
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {MatTableDataSource} from '@angular/material/table';
+import {ApiService} from '../api.service';
 
 @Component({
   selector: 'app-teachers',
@@ -17,33 +16,22 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 // analogicznie jak w komponencie class
 export class TeachersComponent {
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
-  columnsToDisplay = ['name', 'Surname'];
-  expandedElement: PeriodicElement | null | undefined;
-  displayedColumns: string[] = ['name',  'Surname'];
-  ELEMENT_DATA: any;
+  columnsToDisplay: string[] = ['name', 'email'];
+  expandedElement: Data | null | undefined;
+  displayedColumns: string[] = ['name', 'phone', 'email', 'website', 'phone', 'company', 'address'];
+  dataSource: any[] = [];
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+  constructor(private service: ApiService){
+    this.service.getDataUsers().then(data => {
+      this.dataSource = data;
+    });
   }
+
 }
 
-
-export interface PeriodicElement {
+export interface Data {
   name: string;
-  Surname: string;
-  description: string;
+  phone: string;
+  email: string;
+  website: string;
 }
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {
-    name: 'Jakub',
-    Surname: 'Piłat',
-    description: `nr. tel:123456789`
-  }, {
-    name: 'Mateusz',
-    Surname: 'Ładyko',
-    description: `nr. tel:987654321`
-  },
-];

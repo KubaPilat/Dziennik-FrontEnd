@@ -8,7 +8,6 @@ import {ClassComponent} from './class/class.component';
 import {GradesComponent} from './grades/grades.component';
 import {TeachersComponent} from './teachers/teachers.component';
 import {MessageComponent} from './message/message.component';
-import {DialogComponent} from './dialog/dialog.component';
 import {CalendarComponent} from './calendar/calendar.component';
 import {helpToCalendar} from './demo/demo.component';
 import {SendComponent} from './send/send.component';
@@ -16,11 +15,9 @@ import {NoticeComponent} from './notice/notice.component';
 import {SendNoticeComponent} from './send-notice/send-notice.component';
 import {Plan1aComponent} from './plan1a/plan1a.component';
 import {GradesDetailComponent} from './grades-detail/grades-detail.component';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
-  { path: '', component: PageNotFoundComponent },
   {path: 'stronaGlowna', component: MainComponent},
   {path: 'uczniowie', component: StudentsComponent},
   {path: 'logowanie', component: LoginComponent},
@@ -44,5 +41,5 @@ const routes: Routes = [
 export class AppRoutingModule { }
 //zaimportowałem ją w app.module w 3 klinijce
 export const RoutingComponent = [StudentsComponent, MainComponent, LoginComponent, PlanComponent, ClassComponent,
-  GradesComponent, TeachersComponent, MessageComponent, DialogComponent, CalendarComponent, SendComponent, NoticeComponent,
+  GradesComponent, TeachersComponent, MessageComponent, CalendarComponent, SendComponent, NoticeComponent,
   helpToCalendar, SendNoticeComponent, Plan1aComponent, GradesDetailComponent];
