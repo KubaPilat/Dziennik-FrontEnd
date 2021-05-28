@@ -14,6 +14,7 @@ export interface Task {
   templateUrl: './send.component.html',
   styleUrls: ['./send.component.css']
 })
+
 export class SendComponent {
 
   topic!: string;
@@ -28,7 +29,6 @@ export class SendComponent {
     subtasks: [
       {name: 'Kuba', completed: false},
       {name: 'Mati', completed: false},
-      {name: 'XYZ', completed: false}
     ]
   };
 

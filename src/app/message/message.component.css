@@ -20,10 +20,19 @@ table{
   width: 100%;
 }
 
+.main{
+  color: black;
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .button{
   color: white;
   float: left;
   background-color: #00a5e9;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .header{
