@@ -26,7 +26,6 @@ export class TeachersComponent {
       this.dataSource = data;
     });
   }
-
 }
 
 export interface Data {

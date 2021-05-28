@@ -20,7 +20,12 @@
   font-size: 14px;
   width: 100%;
 }
-
+.main{
+  color: black;
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 table {
   width: 100%;

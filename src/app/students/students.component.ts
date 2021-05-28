@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ApiService } from '../api.service';
 
@@ -6,7 +6,6 @@ import { ApiService } from '../api.service';
   selector: 'app-students',
   templateUrl: './students.component.html',
   styleUrls: ['./students.component.css'],
-  // animacja jest potrzebna do otwierania paneli
   animations: [
     trigger('detailExpand', [
       state('collapsed', style({height: '0px', minHeight: '0'})),
@@ -27,7 +26,6 @@ export class StudentsComponent {
       this.dataSource = data;
     });
   }
-
 }
 
 export interface Data {
