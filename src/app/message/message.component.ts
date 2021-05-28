@@ -17,9 +17,9 @@ import { ApiService } from '../api.service';
 
 export class MessageComponent {
   columnsToDisplay: string[] = ['id', 'email'];
-  expandedElement: Data | null | undefined;
+  expandedElement: Data | undefined;
   displayedColumns: string[] = ['body'];
-  dataSource: any[] = [];
+  dataSource: string[] = [];
 
   constructor(private service: ApiService){
     this.service.getDatacomments().then(data => {

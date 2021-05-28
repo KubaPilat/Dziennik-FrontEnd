@@ -8,8 +8,8 @@
   <span class="example-list-section">
     <mat-checkbox class="example-margin"
                   [checked]="allComplete"
-                  [indeterminate]="someComplete()"
-                  (change)="setAll($event.checked)">
+                  [indeterminate]="findComplete()"
+                  (change)="saveCompleted($event.checked)">
       {{task.name}}
     </mat-checkbox>
   </span>

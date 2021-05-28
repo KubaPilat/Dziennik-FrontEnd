@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import { ApiService } from '../api.service';
+import {ApiService} from '../api.service';
 
 @Component({
   selector: 'app-grades',
@@ -9,7 +9,7 @@ import { ApiService } from '../api.service';
 
 export class GradesComponent {
   displayedColumns: string[] = ['id', 'name', 'username', 'actions'];
-  dataSource: any[] = [];
+  dataSource: string[] = [];
 
   constructor(private service: ApiService){
     this.service.getDataUsers().then(data => {

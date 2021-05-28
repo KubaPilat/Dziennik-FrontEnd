@@ -1,12 +1,11 @@
 import {Component} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import { ApiService } from '../api.service';
+import {ApiService} from '../api.service';
 
 @Component({
   selector: 'app-class',
   templateUrl: './class.component.html',
   styleUrls: ['./class.component.css'],
-  // to samo co w student panele
   animations: [
     trigger('detailExpand', [
       state('collapsed', style({height: '0px', minHeight: '0'})),
@@ -19,8 +18,7 @@ import { ApiService } from '../api.service';
 export class ClassComponent {
 
   displayedColumns: string[] = ['id'];
-
-  dataSource: any[] = [];
+  dataSource: string[] = [];
 
   constructor(private service: ApiService){
     this.service.getDataUsers().then(data => {

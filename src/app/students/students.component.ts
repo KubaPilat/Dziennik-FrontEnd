@@ -17,9 +17,9 @@ import { ApiService } from '../api.service';
 
 export class StudentsComponent {
   columnsToDisplay: string[] = ['name', 'email'];
-  expandedElement: Data | null | undefined;
+  expandedElement: Data | undefined;
   displayedColumns: string[] = ['name', 'phone', 'email', 'website', 'id', 'address'];
-  dataSource: any[] = [];
+  dataSource: string[] = [];
 
   constructor(private service: ApiService){
     this.service.getDataUsers().then(data => {
