@@ -9,7 +9,7 @@ import {GradesComponent} from './grades/grades.component';
 import {TeachersComponent} from './teachers/teachers.component';
 import {MessageComponent} from './message/message.component';
 import {CalendarComponent} from './calendar/calendar.component';
-import {helpToCalendar} from './demo/demo.component';
+import {helpToCalendar} from './helpToCalendar/demo.component';
 import {SendComponent} from './send/send.component';
 import {NoticeComponent} from './notice/notice.component';
 import {SendNoticeComponent} from './send-notice/send-notice.component';
