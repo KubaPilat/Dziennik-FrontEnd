@@ -20,16 +20,18 @@
   height:10px;
 }
 
+.main{
+  color: black;
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .text{
   text-align: center;
 }
 
 table {
   text-align: center;
-  width: 100%;
-}
-
-.mat-form-field {
-  font-size: 14px;
   width: 100%;
 }
