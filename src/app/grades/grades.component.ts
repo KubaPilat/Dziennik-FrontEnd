@@ -6,9 +6,9 @@ import { ApiService } from '../api.service';
   templateUrl: './grades.component.html',
   styleUrls: ['./grades.component.css']
 })
+
 export class GradesComponent {
   displayedColumns: string[] = ['id', 'name', 'username', 'actions'];
-
   dataSource: any[] = [];
 
   constructor(private service: ApiService){

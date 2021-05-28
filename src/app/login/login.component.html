@@ -2,22 +2,24 @@
   <p class="school"> Szkoła Podstawowa </p>
 </div>
 
-<br>
-
 <div class="container">
   <form [formGroup]="formGroup"  class="form">
-<!--    (ngSubmit)="onSubmit(formGroup.value)"-->
 
     <mat-form-field floatLabel="never" class="form-element">
-      <input minlength="4" type="number" matInput placeholder="Login" formControlName="username">
+      <label>
+        <input minlength="4" type="number" matInput placeholder="Login" formControlName="username">
+      </label>
     </mat-form-field>
 
     <mat-form-field floatLabel="never" class="form-element">
-      <input minlength="8" type="password" matInput placeholder="Hasło" formControlName="password">
+      <label>
+        <input minlength="8" type="password" matInput placeholder="Hasło" formControlName="password">
+      </label>
     </mat-form-field>
 
     <div class="form-element">
       <a routerLink="/stronaGlowna"><button mat-raised-button color="primary" type="submit" class="button"  [disabled]="!formGroup.valid">Zaloguj</button></a>
     </div>
+
   </form>
 </div>
