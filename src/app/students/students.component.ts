@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
-import {ApiService} from '../api.service';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-students',
@@ -19,7 +19,7 @@ import {ApiService} from '../api.service';
 export class StudentsComponent {
   columnsToDisplay: string[] = ['name', 'email'];
   expandedElement: Data | null | undefined;
-  displayedColumns: string[] = ['name', 'phone', 'email', 'website', 'phone', 'id', 'address'];
+  displayedColumns: string[] = ['name', 'phone', 'email', 'website', 'id', 'address'];
   dataSource: any[] = [];
 
   constructor(private service: ApiService){
@@ -35,4 +35,6 @@ export interface Data {
   phone: string;
   email: string;
   website: string;
+  id: number;
+  address: string;
 }
